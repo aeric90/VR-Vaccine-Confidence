@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7864986009510753205}
   - component: {fileID: 7864986009510753206}
   - component: {fileID: 7864986009510753211}
+  - component: {fileID: 1791591048411137973}
   m_Layer: 0
   m_Name: TriSphere
   m_TagString: Untagged
@@ -28,7 +29,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7864986009510753213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,3 +116,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InactiveMaterial: {fileID: 2100000, guid: b5f3136c0efcb40b18050a014202c92c, type: 2}
   GazedAtMaterial: {fileID: 2100000, guid: 98e1ed660e0a3453494d31d659d7388c, type: 2}
+--- !u!114 &1791591048411137973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864986009510753213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190273610072cfd43948c5c8f538b4a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

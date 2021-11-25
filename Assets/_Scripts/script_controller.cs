@@ -18,7 +18,6 @@ using UnityEngine;
  * 
 */
 
-
 [Serializable]
 [XmlRoot("sequence_container")]
 // This class contains a list of sequence objects and is required by the deserialization process.
@@ -144,7 +143,9 @@ public class script_controller : MonoBehaviour
     public void Import_Sequence()
     {
         XmlSerializer serializer = new XmlSerializer(sequence.GetType());
-        var myFileStream = new FileStream(Application.persistentDataPath + "/sequence.xml", FileMode.Open);
+        //var textFile = Resources.Load<TextAsset>("Text/sequence.xml");
+
+        var myFileStream = new FileStream("Assets/Resources/Text/sequence.xml", FileMode.Open);
         sequence = serializer.Deserialize(myFileStream) as sequence_container;
         myFileStream.Close();
     }
@@ -154,7 +155,7 @@ public class script_controller : MonoBehaviour
     public void Export_Sequence()
     {
         XmlSerializer serializer = new XmlSerializer(sequence.GetType());
-        TextWriter textWriter = new StreamWriter(Application.persistentDataPath + "/sequence.xml");
+        TextWriter textWriter = new StreamWriter("/Assets/sequence.xml");
         serializer.Serialize(textWriter, sequence);
         textWriter.Close();
     }

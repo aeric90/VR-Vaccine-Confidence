@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sequence_container xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sequence_Objects>
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Event_Id>1</Event_Id>
+      <Complete_Flag>false</Complete_Flag>
+      <Prefab>Icosahedron</Prefab>
+    </sequence_object>
+    <sequence_object>
+      <Start_Time>10</Start_Time>
+      <Event_Id>1</Event_Id>
+      <Complete_Flag>false</Complete_Flag>
+      <Prefab>QuadSphere</Prefab>
+    </sequence_object>
+    <sequence_object>
+      <Start_Time>15</Start_Time>
+      <Event_Id>1</Event_Id>
+      <Complete_Flag>false</Complete_Flag>
+      <Prefab>TriSphere</Prefab>
+    </sequence_object>
+  </Sequence_Objects>
+</sequence_container>
