@@ -2,22 +2,46 @@
 <sequence_container xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Sequence_Objects>
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>0</Start_Time>
       <Event_Id>1</Event_Id>
       <Complete_Flag>false</Complete_Flag>
-      <Prefab>Icosahedron</Prefab>
+      <Prefab>Red Blood Cell Particles</Prefab>
+      <Scene_ID>0</Scene_ID>
     </sequence_object>
     <sequence_object>
       <Start_Time>10</Start_Time>
-      <Event_Id>1</Event_Id>
+      <Event_Id>2</Event_Id>
       <Complete_Flag>false</Complete_Flag>
-      <Prefab>QuadSphere</Prefab>
+      <Prefab>Cell</Prefab>
+      <Scene_ID>0</Scene_ID>
     </sequence_object>
     <sequence_object>
       <Start_Time>15</Start_Time>
-      <Event_Id>1</Event_Id>
+      <Event_Id>2</Event_Id>
       <Complete_Flag>false</Complete_Flag>
-      <Prefab>TriSphere</Prefab>
+      <Prefab>Covid Cell</Prefab>
+      <Scene_ID>0</Scene_ID>
+    </sequence_object>
+    <sequence_object>
+      <Start_Time>20</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Complete_Flag>false</Complete_Flag>
+      <Prefab></Prefab>
+      <Scene_ID>1</Scene_ID>
+    </sequence_object>
+    <sequence_object>
+      <Start_Time>20</Start_Time>
+      <Event_Id>30</Event_Id>
+      <Complete_Flag>false</Complete_Flag>
+      <Prefab></Prefab>
+      <Scene_ID>1</Scene_ID>
+    </sequence_object>
+    <sequence_object>
+      <Start_Time>30</Start_Time>
+      <Event_Id>20</Event_Id>
+      <Complete_Flag>false</Complete_Flag>
+      <Prefab></Prefab>
+      <Scene_ID>1</Scene_ID>
     </sequence_object>
   </Sequence_Objects>
 </sequence_container>

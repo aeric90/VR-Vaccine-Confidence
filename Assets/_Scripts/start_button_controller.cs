@@ -2,6 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+ * VR Vaccine Confidence
+ * start_button_controller.cs
+ *
+ * Created By: Eric DeMarbre
+ * 
+ * Last Update By: Eric DeMarbre
+ * Last Update: December 14, 2021
+ *
+ * This script contains all code associated to the start button object.
+ * 
+*/
+
 public class start_button_controller : MonoBehaviour
 {
     public Material InactiveMaterial;
@@ -35,7 +48,9 @@ public class start_button_controller : MonoBehaviour
 
     public void OnPointerClick()
     {
-        
+        start_ui_controller.instance.Hide_UI();
+        script_controller.instance.LangFlag = flag;
+        script_controller.instance.ScriptActive = true;
     }
 
     private void SetMaterial(bool gazedAt)

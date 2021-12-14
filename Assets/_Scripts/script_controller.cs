@@ -48,6 +48,7 @@ public class sequence_object
     private int event_id; // The ID for the type of event that this is
     private bool complete_flag = false; // Flag to determine if this event has been triggered already or not
     private string prefab; // Name of a saved prefab that will be instantiated when the event triggers
+    private int scene_id; // ID of the scene code to transition to. This will be used to control animation transitions
 
     // CONSTRUCTORS
     // Deserialization requires an empty contructor.
@@ -79,6 +80,11 @@ public class sequence_object
         get { return prefab; }
         set { prefab = value; }
     }
+    public int Scene_ID
+    {
+        get { return scene_id; }
+        set { scene_id = value; }
+    }
 }
 
 // The script controller's primary function is to trigger a list of timed events for program based on the contents of an external XML
@@ -96,8 +102,24 @@ public class script_controller : MonoBehaviour
         if (instance == null) instance = this;
     }
 
+    public TextAsset scriptFile;
+
+    private bool scriptActive = false; // Only start processing the script when this bool is active.
+    private string langFlag = ""; // Language flag used to select subtitle and audio files.
     private float time_elapsed = 0.0f; // Will store the time in seconds elapsed during the program.
     private sequence_container sequence = new sequence_container(); // Stores the container for the sequence objects. Needs to exist for the deserialization process.
+
+    public bool ScriptActive
+    {
+        get { return scriptActive; }
+        set { scriptActive = value; }
+    }
+
+    public string LangFlag
+    {
+        get { return langFlag; }
+        set { langFlag = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -109,30 +131,54 @@ public class script_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Update the program time elapsed.
-        time_elapsed += Time.deltaTime;
-
-        // Loop through all the sequence objects in the sequence container
-        foreach (sequence_object i in sequence.Sequence_Objects)
+        if (scriptActive)
         {
-            // If the sequence object has not yet been completed
-            if (i.Complete_Flag == false)
-            {
-                // If the time trigger for the sequence object has been met
-                if (time_elapsed >= i.Start_Time)
-                {
-                    // At this point the script controller will check the Event Type ID and perform different functions based on the ID
-                    // i.e. Instantiate a prefab, play an audio file, transition to a different environment. Since there is only one action
-                    // right now, there is no selection structure.
+            // Update the program time elapsed.
+            time_elapsed += Time.deltaTime;
 
-                    // Load the prefab listed in the sequence object and instantiate it under the Treasure parent.
-                    // NOTE - This will be replaced by a call to the SCENE_CONTROLLER object passing the Prefab over to it to properly place it in the scene
-                    // NOTE - This will also be included with a location, rotation, and scale value as needed
-                    var loaded_resource = Resources.Load("Prefabs/" + i.Prefab);
-                    GameObject loaded_object = Instantiate(loaded_resource, GameObject.Find("Treasure").transform) as GameObject; //, scenario_objects.Scenario_Object_Position, scenario_objects.Scenario_Object_Rotation, container.transform) as GameObject;
-                    
-                    // Set the sequence object to completed.
-                    i.Complete_Flag = true;
+            // Loop through all the sequence objects in the sequence container
+            foreach (sequence_object i in sequence.Sequence_Objects)
+            {
+                // If the sequence object has not yet been completed
+                if (i.Complete_Flag == false)
+                {
+                    // If the time trigger for the sequence object has been met
+                    if (time_elapsed >= i.Start_Time)
+                    {
+                        // At this point the script controller will check the Event Type ID and perform different functions based on the ID
+                        // i.e. Instantiate a prefab, play an audio file, transition to a different environment. 
+
+                        switch(i.Event_Id)
+                        {
+                            case 1:
+                                scene_manager.instance.Single_Spawn(i.Prefab);
+                                break;
+                            case 2:
+                                scene_manager.instance.Quad_Spawn(i.Prefab);
+                                break;
+                            case 3:
+                                scene_manager.instance.Set_Scene_State_ID(i.Scene_ID);
+                                break;
+                            case 10:
+                                // Caption / Subtitle Control
+                                break;
+                            case 15:
+                                // Audio File Trigger
+                                break;
+                            case 20:
+                                scene_manager.instance.Clear_All_Spawns();
+                                break;
+                            case 30:
+                                scene_manager.instance.Skybox_To_Office();
+                                break;
+                            case 35:
+                                scene_manager.instance.Skybox_To_Blood();
+                                break;
+                        }
+
+                        // Set the sequence object to completed.
+                        i.Complete_Flag = true;
+                    }
                 }
             }
         }
@@ -143,11 +189,12 @@ public class script_controller : MonoBehaviour
     public void Import_Sequence()
     {
         XmlSerializer serializer = new XmlSerializer(sequence.GetType());
-        //var textFile = Resources.Load<TextAsset>("Text/sequence.xml");
+        //var myFileStream = new FileStream("Assets/Resources/Text/sequence.xml", FileMode.Open);
 
-        var myFileStream = new FileStream("Assets/Resources/Text/sequence.xml", FileMode.Open);
-        sequence = serializer.Deserialize(myFileStream) as sequence_container;
-        myFileStream.Close();
+        var reader = new System.IO.StringReader(scriptFile.text);
+
+        sequence = serializer.Deserialize(reader) as sequence_container;
+        //myFileStream.Close();
     }
 
     // This function exports the current list of sequence objects in the container to an external XML file. This is primarily used for 
