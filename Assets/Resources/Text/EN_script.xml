@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<script_container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Script_Objects>
+		<script_object>
+			<Script_ID>1</Script_ID>
+			<Script_Text>To understand how mRNA vaccines protect us from COVID-19, we need to know exactly how the virus infects our body.</Script_Text>
+		</script_object>
+	</Script_Objects>
+	<Script_Objects>
+		<script_object>
+			<Script_ID>2</Script_ID>
+			<Script_Text>When a COVID-19 virus enters our body , it uses specialized spikes on its exterior to attach to our cells.</Script_Text>
+		</script_object>
+	</Script_Objects>
+	<Script_Objects>
+		<script_object>
+			<Script_ID>3</Script_ID>
+			<Script_Text>Once COVID-19 attaches, the virus inserts its genetic code, called RNA, into a cell to seize control.</Script_Text>
+		</script_object>
+	</Script_Objects>
+	<Script_Objects>
+		<script_object>
+			<Script_ID>4</Script_ID>
+			<Script_Text>The virus’s genetic material tells the human cell to stop its normal job and focus on making COVID-19 instead. </Script_Text>
+		</script_object>
+	</Script_Objects>
+	<Script_Objects>
+		<script_object>
+			<Script_ID>5</Script_ID>
+			<Script_Text>This turns our healthy cells into virus factories that then release more viruses that can then infect other cells.</Script_Text>
+		</script_object>
+	</Script_Objects>
+	<Script_Objects>
+		<script_object>
+			<Script_ID>6</Script_ID>
+			<Script_Text>Because our cells are busy making COVID-19 instead of doing their jobs to keep us alive, we get really sick.</Script_Text>
+		</script_object>
+	</Script_Objects>
+	<Script_Objects>
+		<script_object>
+			<Script_ID>7</Script_ID>
+			<Script_Text>Vaccination is a way to teach our immune system to fight COVID-19 before the virus can make us very sick.</Script_Text>
+		</script_object>
+	</Script_Objects>
+	<Script_Objects>
+		<script_object>
+			<Script_ID>8</Script_ID>
+			<Script_Text>To do so, a vaccine trains our immune system to recognize the spikes on COVID-19 and to destroy the virus.</Script_Text>
+		</script_object>
+	</Script_Objects>
+</script_container>

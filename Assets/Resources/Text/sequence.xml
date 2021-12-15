@@ -9,11 +9,23 @@
       <Scene_ID>0</Scene_ID>
     </sequence_object>
     <sequence_object>
+      <Start_Time>0</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Complete_Flag>false</Complete_Flag>
+      <Script_Line_ID>1</Script_Line_ID>
+    </sequence_object>
+    <sequence_object>
       <Start_Time>10</Start_Time>
       <Event_Id>2</Event_Id>
       <Complete_Flag>false</Complete_Flag>
       <Prefab>Cell</Prefab>
       <Scene_ID>0</Scene_ID>
+    </sequence_object>
+    <sequence_object>
+      <Start_Time>10</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Complete_Flag>false</Complete_Flag>
+      <Script_Line_ID>2</Script_Line_ID>
     </sequence_object>
     <sequence_object>
       <Start_Time>15</Start_Time>

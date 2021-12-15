@@ -49,6 +49,7 @@ public class sequence_object
     private bool complete_flag = false; // Flag to determine if this event has been triggered already or not
     private string prefab; // Name of a saved prefab that will be instantiated when the event triggers
     private int scene_id; // ID of the scene code to transition to. This will be used to control animation transitions
+    private int script_line_id;
 
     // CONSTRUCTORS
     // Deserialization requires an empty contructor.
@@ -85,6 +86,69 @@ public class sequence_object
         get { return scene_id; }
         set { scene_id = value; }
     }
+
+    public int Script_Line_ID
+    {
+        get { return script_line_id; }
+        set { script_line_id = value; }
+    }
+}
+
+[Serializable]
+[XmlRoot("script_container")]
+public class script_container
+{
+    // ATTRIBUTES
+    private List<script_object> script_objects = new List<script_object>(); // List of sequence objects
+
+    // CONSTRUCTORS
+    // Deserialization requires an empty contructor.
+    public script_container() { }
+
+    // GET/SET 
+    public List<script_object> Script_Objects
+    {
+        get { return script_objects; }
+        set { script_objects = value; }
+    }
+
+    public string Get_Script_Line(int script_id)
+    {
+        string script_text_output = "";
+
+        foreach(script_object script_line in script_objects)
+        {
+            if (script_line.Script_ID == script_id) script_text_output = script_line.Script_Text;
+        }
+
+        return script_text_output;
+    }
+}
+
+[Serializable]
+[XmlRoot("script_object")]
+public class script_object
+{
+    // ATTRIBUTES
+    private int script_id;
+    private string script_text;
+
+    // CONSTRUCTORS
+    // Deserialization requires an empty contructor.
+    public script_object() { }
+
+    // GET/SET 
+    public int Script_ID
+    {
+        get { return script_id; }
+        set { script_id = value; }
+    }
+
+    public string Script_Text
+    {
+        get { return script_text; }
+        set { script_text = value; }
+    }
 }
 
 // The script controller's primary function is to trigger a list of timed events for program based on the contents of an external XML
@@ -102,23 +166,26 @@ public class script_controller : MonoBehaviour
         if (instance == null) instance = this;
     }
 
-    public TextAsset scriptFile;
+    public TextAsset sequence_file;
+    public TextAsset EN_script_file;
+    public TextAsset FR_script_file;
 
-    private bool scriptActive = false; // Only start processing the script when this bool is active.
-    private string langFlag = ""; // Language flag used to select subtitle and audio files.
+    private bool script_active = false; // Only start processing the script when this bool is active.
+    private string lang_flag = ""; // Language flag used to select subtitle and audio files.
     private float time_elapsed = 0.0f; // Will store the time in seconds elapsed during the program.
     private sequence_container sequence = new sequence_container(); // Stores the container for the sequence objects. Needs to exist for the deserialization process.
+    private script_container script = new script_container();
 
-    public bool ScriptActive
+    public bool Script_Active
     {
-        get { return scriptActive; }
-        set { scriptActive = value; }
+        get { return script_active; }
+        set { script_active = value; }
     }
 
-    public string LangFlag
+    public string Lang_Flag
     {
-        get { return langFlag; }
-        set { langFlag = value; }
+        get { return lang_flag; }
+        set { lang_flag = value; }
     }
 
     // Start is called before the first frame update
@@ -126,12 +193,14 @@ public class script_controller : MonoBehaviour
     {
         // Import the script XML file and deserialize it into the sequence objects for processing.
         Import_Sequence();
+
+        Import_Script();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (scriptActive)
+        if (Script_Active)
         {
             // Update the program time elapsed.
             time_elapsed += Time.deltaTime;
@@ -160,7 +229,7 @@ public class script_controller : MonoBehaviour
                                 scene_manager.instance.Set_Scene_State_ID(i.Scene_ID);
                                 break;
                             case 10:
-                                // Caption / Subtitle Control
+                                scene_manager.instance.Update_Caption_Text(script.Get_Script_Line(i.Script_Line_ID));
                                 break;
                             case 15:
                                 // Audio File Trigger
@@ -189,12 +258,19 @@ public class script_controller : MonoBehaviour
     public void Import_Sequence()
     {
         XmlSerializer serializer = new XmlSerializer(sequence.GetType());
-        //var myFileStream = new FileStream("Assets/Resources/Text/sequence.xml", FileMode.Open);
 
-        var reader = new System.IO.StringReader(scriptFile.text);
+        var reader = new System.IO.StringReader(sequence_file.text);
 
         sequence = serializer.Deserialize(reader) as sequence_container;
-        //myFileStream.Close();
+    }
+
+    public void Import_Script()
+    {
+        XmlSerializer serializer = new XmlSerializer(script.GetType());
+
+        var reader = new System.IO.StringReader(EN_script_file.text);
+
+        script = serializer.Deserialize(reader) as script_container;
     }
 
     // This function exports the current list of sequence objects in the container to an external XML file. This is primarily used for 

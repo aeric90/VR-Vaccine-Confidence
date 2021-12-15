@@ -49,8 +49,8 @@ public class start_button_controller : MonoBehaviour
     public void OnPointerClick()
     {
         start_ui_controller.instance.Hide_UI();
-        script_controller.instance.LangFlag = flag;
-        script_controller.instance.ScriptActive = true;
+        script_controller.instance.Lang_Flag = flag;
+        script_controller.instance.Script_Active = true;
     }
 
     private void SetMaterial(bool gazedAt)

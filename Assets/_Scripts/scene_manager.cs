@@ -8,10 +8,12 @@ public class scene_manager : MonoBehaviour
 
     public GameObject single_spawn;
     public GameObject[] quad_spawns;
+    public TMPro.TextMeshProUGUI caption_text;
 
     public Material office_mat;
     public Material blood_stream_mat;
 
+    private string caption_buffer = "";
     private int scene_state = 0;
     
     // Start is called before the first frame update
@@ -23,7 +25,7 @@ public class scene_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        caption_text.text = caption_buffer;
     }
 
     public void Clear_All_Spawns()
@@ -81,5 +83,10 @@ public class scene_manager : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
+    }
+
+    public void Update_Caption_Text(string text)
+    {
+        caption_buffer = text;
     }
 }
