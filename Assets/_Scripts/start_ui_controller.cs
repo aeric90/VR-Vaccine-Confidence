@@ -19,13 +19,13 @@ public class start_ui_controller : MonoBehaviour
         {
             Hide_UI();
             script_controller.instance.Lang_Flag = "EN";
-            script_controller.instance.Script_Active = true;
+            script_controller.instance.Start_Script();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Hide_UI();
             script_controller.instance.Lang_Flag = "FR";
-            script_controller.instance.Script_Active = true;
+            script_controller.instance.Start_Script();
         }
     }
 

@@ -193,8 +193,6 @@ public class script_controller : MonoBehaviour
     {
         // Import the script XML file and deserialize it into the sequence objects for processing.
         Import_Sequence();
-
-        Import_Script();
     }
 
     // Update is called once per frame
@@ -253,14 +251,18 @@ public class script_controller : MonoBehaviour
         }
     }
 
+    public void Start_Script()
+    {
+        Import_Script();
+        Script_Active = true;
+    }
+
     // This function takes an external XML file and imports the list of sequence objects into the container that can be processed
     // by the script controller
     public void Import_Sequence()
     {
         XmlSerializer serializer = new XmlSerializer(sequence.GetType());
-
         var reader = new System.IO.StringReader(sequence_file.text);
-
         sequence = serializer.Deserialize(reader) as sequence_container;
     }
 
@@ -268,8 +270,15 @@ public class script_controller : MonoBehaviour
     {
         XmlSerializer serializer = new XmlSerializer(script.GetType());
 
-        var reader = new System.IO.StringReader(EN_script_file.text);
+        StringReader reader = null;
 
+        if (lang_flag == "EN")
+        {
+            reader = new System.IO.StringReader(EN_script_file.text);
+        } else if (lang_flag == "FR")
+        {
+            reader = new System.IO.StringReader(FR_script_file.text);
+        }
         script = serializer.Deserialize(reader) as script_container;
     }
 
