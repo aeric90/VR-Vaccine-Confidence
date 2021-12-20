@@ -5,21 +5,16 @@ using UnityEngine.Audio;
 
 public class audioManager : MonoBehaviour
 {
+    public static audioManager instance;
     public Sound[] sounds;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Awake()
     {
         foreach (Sound s in sounds)
         {
@@ -29,9 +24,17 @@ public class audioManager : MonoBehaviour
         }
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     public void Play (string name)
     {
-        Sound s = Array.Find(sounds, sounds => sound.name == name);
-        s.source.Play();
+        foreach (Sound s in sounds)
+        {
+            if(s.name == name) s.source.Play();
+        }
     }
 }

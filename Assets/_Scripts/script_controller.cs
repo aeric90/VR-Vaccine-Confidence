@@ -226,20 +226,44 @@ public class script_controller : MonoBehaviour
                             case 3:
                                 scene_manager.instance.Set_Scene_State_ID(i.Scene_ID);
                                 break;
+                            case 4:
+                                scene_manager.instance.Camera_Spawn(i.Prefab);
+                                break;
                             case 10:
                                 scene_manager.instance.Update_Caption_Text(script.Get_Script_Line(i.Script_Line_ID));
                                 break;
                             case 15:
-                                // Audio File Trigger
+                                scene_manager.instance.Play_Audio_File(lang_flag + "_" + i.Script_Line_ID);
                                 break;
                             case 20:
                                 scene_manager.instance.Clear_All_Spawns();
+                                break;
+                            case 22:
+                                scene_manager.instance.Clear_Single_Spawn();
+                                break;
+                            case 23:
+                                scene_manager.instance.Clear_Camera_Spawn(i.Prefab);
+                                break;
+                            case 25:
+                                scene_manager.instance.Clear_Quad_Spawn();
                                 break;
                             case 30:
                                 scene_manager.instance.Skybox_To_Office();
                                 break;
                             case 35:
                                 scene_manager.instance.Skybox_To_Blood();
+                                break;
+                            case 40:
+                                scene_manager.instance.Start_Blood_Stream();
+                                break;
+                            case 45:
+                                scene_manager.instance.Stop_Blood_Stream();
+                                break;
+                            case 50:
+                                scene_manager.instance.Turn_Fade_On();
+                                break;
+                            case 55:
+                                scene_manager.instance.Turn_Fade_Off();
                                 break;
                         }
 
@@ -261,9 +285,11 @@ public class script_controller : MonoBehaviour
     // by the script controller
     public void Import_Sequence()
     {
+        Debug.Log(sequence_file.text);
         XmlSerializer serializer = new XmlSerializer(sequence.GetType());
         var reader = new System.IO.StringReader(sequence_file.text);
         sequence = serializer.Deserialize(reader) as sequence_container;
+        Debug.Log(sequence.Sequence_Objects.Count);
     }
 
     public void Import_Script()
@@ -275,10 +301,12 @@ public class script_controller : MonoBehaviour
         if (lang_flag == "EN")
         {
             reader = new System.IO.StringReader(EN_script_file.text);
-        } else if (lang_flag == "FR")
+        } 
+        else if (lang_flag == "FR")
         {
             reader = new System.IO.StringReader(FR_script_file.text);
         }
+
         script = serializer.Deserialize(reader) as script_container;
     }
 

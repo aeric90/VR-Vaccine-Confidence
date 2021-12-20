@@ -1,92 +1,200 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <sequence_container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Sequence_Objects>
-		<sequence_object>
-			<Start_Time>5</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>1</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>7</Start_Time>
-			<Event_Id>2</Event_Id>
-			<Prefab>Cell</Prefab>
-			<Scene_ID>0</Scene_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>15</Start_Time>
-			<Event_Id>2</Event_Id>
-			<Prefab>Covid Cell</Prefab>
-			<Scene_ID>0</Scene_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>15</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>2</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>25</Start_Time>
-			<Event_Id>3</Event_Id>
-			<Scene_ID>1</Scene_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>25</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>3</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>35</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>4</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>45</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>5</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>55</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>6</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>65</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>7</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>65</Start_Time>
-			<Event_Id>30</Event_Id>
-			<Scene_ID>1</Scene_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>75</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>8</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>85</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>9</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>95</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>10</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>105</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>11</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>115</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>12</Script_Line_ID>
-		</sequence_object>
-		<sequence_object>
-			<Start_Time>125</Start_Time>
-			<Event_Id>10</Event_Id>
-			<Script_Line_ID>13</Script_Line_ID>
-		</sequence_object>
-	</Sequence_Objects>
+  <Sequence_Objects>
+    <!-- Create Fade Pane -->
+    <sequence_object>
+      <Start_Time>0</Start_Time>
+      <Event_Id>4</Event_Id>
+      <Prefab>Fade Plane</Prefab>
+    </sequence_object>
+    
+    <!-- Line 1 -->
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>1</Script_Line_ID>
+    </sequence_object>
+    
+    <!-- Cell Appears -->
+    <sequence_object>
+      <Start_Time>7</Start_Time>
+      <Event_Id>2</Event_Id>
+      <Prefab>Cell</Prefab>
+      <Scene_ID>0</Scene_ID>
+    </sequence_object>
+    
+    <!-- Covid Cell Appears -->
+    <sequence_object>
+      <Start_Time>15</Start_Time>
+      <Event_Id>2</Event_Id>
+      <Prefab>Covid Cell</Prefab>
+      <Scene_ID>0</Scene_ID>
+    </sequence_object>
+    
+    <!-- Line 2 -->
+    <sequence_object>
+      <Start_Time>15</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>2</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Trigger Scene 1 - Covid Cell Attacks -->
+    <sequence_object>
+      <Start_Time>25</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>1</Scene_ID>
+    </sequence_object>
+    
+    <!-- Line 3 -->
+    <sequence_object>
+      <Start_Time>25</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>3</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Line 4 -->
+    <sequence_object>
+      <Start_Time>35</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>4</Script_Line_ID>
+    </sequence_object>
+    
+    <!-- Trigger Scene 2 - Covid Cell Propogation -->
+    <sequence_object>
+      <Start_Time>35</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>2</Scene_ID>
+    </sequence_object>
+
+    <!-- Line 5 -->
+    <sequence_object>
+      <Start_Time>45</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>5</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Line 5 -->
+    <sequence_object>
+      <Start_Time>55</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>6</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Fade Out -->
+    <sequence_object>
+      <Start_Time>60</Start_Time>
+      <Event_Id>50</Event_Id>
+    </sequence_object>
+
+    <!-- Clear Quad Spawns -->
+    <sequence_object>
+      <Start_Time>63</Start_Time>
+      <Event_Id>25</Event_Id>
+    </sequence_object>
+    
+    <!-- Change Skybox To Office -->
+    <sequence_object>
+      <Start_Time>63</Start_Time>
+      <Event_Id>30</Event_Id>
+    </sequence_object>
+
+    <!-- Turn Off Blood Stream -->
+    <sequence_object>
+      <Start_Time>63</Start_Time>
+      <Event_Id>45</Event_Id>
+    </sequence_object>
+    
+    <!-- Fade In -->
+    <sequence_object>
+      <Start_Time>63</Start_Time>
+      <Event_Id>55</Event_Id>
+    </sequence_object>
+
+    <!-- Line 7 -->
+    <sequence_object>
+      <Start_Time>65</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>7</Script_Line_ID>
+    </sequence_object>
+    
+    <!-- Syringe MRNA System Appears -->
+    <sequence_object>
+      <Start_Time>65</Start_Time>
+      <Event_Id>4</Event_Id>
+      <Prefab>Syringe MRNA System</Prefab>
+    </sequence_object>
+    
+    <!-- Line 8 -->
+    <sequence_object>
+      <Start_Time>75</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>8</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Syringe MRNA System Disapears -->
+    <sequence_object>
+      <Start_Time>80</Start_Time>
+      <Event_Id>23</Event_Id>
+      <Prefab>Syringe MRNA System</Prefab>
+    </sequence_object>
+
+    <!-- Fade Out -->
+    <sequence_object>
+      <Start_Time>80</Start_Time>
+      <Event_Id>50</Event_Id>
+    </sequence_object>
+
+    <!-- Change Skybox To Blood Stream -->
+    <sequence_object>
+      <Start_Time>83</Start_Time>
+      <Event_Id>35</Event_Id>
+    </sequence_object>
+
+    <!-- Turn On Blood Stream -->
+    <sequence_object>
+      <Start_Time>83</Start_Time>
+      <Event_Id>40</Event_Id>
+    </sequence_object>
+
+    <!-- Fade In -->
+    <sequence_object>
+      <Start_Time>83</Start_Time>
+      <Event_Id>55</Event_Id>
+    </sequence_object>
+    
+    <!-- Line 9 -->
+    <sequence_object>
+      <Start_Time>85</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>9</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Line 10 -->
+    <sequence_object>
+      <Start_Time>95</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>10</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Line 11 -->
+    <sequence_object>
+      <Start_Time>105</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>11</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Line 12 -->
+    <sequence_object>
+      <Start_Time>115</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>12</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Line 13 -->
+    <sequence_object>
+      <Start_Time>125</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>13</Script_Line_ID>
+    </sequence_object>
+  </Sequence_Objects>
 </sequence_container>

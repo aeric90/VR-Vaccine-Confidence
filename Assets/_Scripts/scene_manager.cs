@@ -8,13 +8,17 @@ public class scene_manager : MonoBehaviour
 
     public GameObject single_spawn;
     public GameObject[] quad_spawns;
+    public GameObject camera_spawn;
     public TMPro.TextMeshProUGUI caption_text;
+
+    public GameObject blood_stream;
 
     public Material office_mat;
     public Material blood_stream_mat;
 
     private string caption_buffer = "";
     private int scene_state = 0;
+    private bool fade_state = false;
     
     // Start is called before the first frame update
     void Start()
@@ -37,6 +41,11 @@ public class scene_manager : MonoBehaviour
     public void Set_Scene_State_ID(int i)
     {
         scene_state = i;
+    }
+
+    public int Get_Scene_State_ID()
+    {
+        return scene_state;
     }
 
     public void Skybox_To_Office()
@@ -85,8 +94,53 @@ public class scene_manager : MonoBehaviour
         }
     }
 
+    public void Camera_Spawn(string prefab_name)
+    {
+        var loaded_resource = Resources.Load("Prefabs/" + prefab_name);
+
+        GameObject loaded_object = Instantiate(loaded_resource, camera_spawn.transform) as GameObject;
+    }
+
+    public void Clear_Camera_Spawn(string prefab_name)
+    {
+        foreach (Transform child in camera_spawn.transform)
+        {
+            if(child.name.Contains(prefab_name)) Destroy(child.gameObject);
+        }
+    }
+
     public void Update_Caption_Text(string text)
     {
         caption_buffer = text;
+    }
+
+    public void Play_Audio_File(string file_name)
+    {
+        audioManager.instance.Play(file_name);
+    }
+
+    public void Start_Blood_Stream()
+    {
+        blood_stream.SetActive(true);
+    }
+
+    public void Stop_Blood_Stream()
+    {
+        blood_stream.SetActive(false);
+    }
+
+    public bool Get_Fade_State()
+    {
+        return fade_state;
+    }
+
+    public void Turn_Fade_On()
+    {
+        fade_state = true;
+    }
+
+    public void Turn_Fade_Off()
+    {
+        fade_state = false;
     }
 }

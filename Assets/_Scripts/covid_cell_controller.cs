@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cell_controller : MonoBehaviour
+public class covid_cell_controller : MonoBehaviour
 {
     public Renderer cell_renderer;
-    public GameObject covid_particles;
 
     private float fade_in_duration = 3.0f;
     private float lerp_param = 0.0f;
@@ -19,8 +18,6 @@ public class cell_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (scene_manager.instance.Get_Scene_State_ID() == 2) covid_particles.SetActive(true);        
-
         lerp_param += Time.deltaTime;
 
         Color cell_color = cell_renderer.material.color;
