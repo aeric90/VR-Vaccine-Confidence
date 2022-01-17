@@ -9,6 +9,7 @@ public class audioManager : MonoBehaviour
     public Sound[] sounds;
 
     void Awake()
+<<<<<<< Updated upstream
     {
         instance = this;
     }
@@ -31,10 +32,37 @@ public class audioManager : MonoBehaviour
     }
 
     public void Play (string name)
+=======
+>>>>>>> Stashed changes
     {
         foreach (Sound s in sounds)
         {
             if(s.name == name) s.source.Play();
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    public void Play (string name)
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            if (sounds[i].name == name)
+            {
+                sounds[i].source.Play();
+            }
+        }
+    }
+
+    public void Change (string name, AudioClip replacement)
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            if (sounds[i].name == name)
+            {
+                sounds[i].clip = replacement;
+            }
+        }
+    }
+>>>>>>> Stashed changes
 }
