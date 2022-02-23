@@ -1,5 +1,5 @@
 {
-    "m_SelectedDeviceId": "1WMHH821RJ0323",
+    "m_SelectedDeviceId": "",
     "m_SelectedPackage": {
         "deviceId": "",
         "name": "",
@@ -7,32 +7,7 @@
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "12231FDD4001J4",
-            "name": "com.CarletonUniversity.VRVaccineConfidence",
-            "processId": 15748,
-            "exited": true
-        },
-        {
-            "deviceId": "12231FDD4001J4",
-            "name": "com.CarletonUniversity.VRVaccineConfidence",
-            "processId": 17649,
-            "exited": true
-        },
-        {
-            "deviceId": "12231FDD4001J4",
-            "name": "com.CarletonUniversity.VRVaccineConfidence",
-            "processId": 29653,
-            "exited": false
-        },
-        {
-            "deviceId": "1WMHH821RJ0323",
-            "name": "com.oculus.os.vrusb",
-            "processId": 1794,
-            "exited": false
-        }
-    ],
+    "m_KnownPackagesForSerialization": [],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,7 +16,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "",
@@ -57,7 +32,7 @@
             },
             {
                 "m_Name": "Unity",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "CRASH",
@@ -66,20 +41,9 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 300.0,
-        "MemoryWindowWidth": 170.0,
-        "MemoryTypeEnabled": [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-        ],
+        "MemoryWindowHeight": 0.0,
+        "MemoryWindowWidth": 0.0,
+        "MemoryTypeEnabled": [],
         "MemoryGroup": 2,
         "Behavior": 0
     },

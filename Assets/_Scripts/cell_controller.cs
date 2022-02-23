@@ -4,32 +4,25 @@ using UnityEngine;
 
 public class cell_controller : MonoBehaviour
 {
+    private Animator animator;
     public Renderer cell_renderer;
     public GameObject covid_particles;
-
-    private float fade_in_duration = 3.0f;
-    private float lerp_param = 0.0f;
+    public GameObject protein_particles;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (scene_manager.instance.Get_Scene_State_ID() == 2) covid_particles.SetActive(true);        
+        animator.SetInteger("scene_state", scene_manager.instance.Get_Scene_State_ID());
 
-        lerp_param += Time.deltaTime;
+        if (scene_manager.instance.Get_Scene_State_ID() == 4) covid_particles.SetActive(true);
 
-        Color cell_color = cell_renderer.material.color;
+        if (scene_manager.instance.Get_Scene_State_ID() == 10) protein_particles.SetActive(true);
 
-        if (cell_color.a < 1.0f)
-        {
-            float a = Mathf.Lerp(0.0f, 1.0f, lerp_param / fade_in_duration);
-            cell_color.a = a;
-            cell_renderer.material.color = cell_color;
-        }
     }
 }

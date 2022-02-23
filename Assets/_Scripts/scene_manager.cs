@@ -19,7 +19,22 @@ public class scene_manager : MonoBehaviour
     private string caption_buffer = "";
     private int scene_state = 0;
     private bool fade_state = false;
-    
+
+    private string lang_flag = "EN"; // Language flag used to select subtitle and audio files.
+    private bool cc_flag = false;
+
+    public string Lang_Flag
+    {
+        get { return lang_flag; }
+        set { lang_flag = value; }
+    }
+
+    public bool CC_Flag
+    {
+        get { return cc_flag; }
+        set { cc_flag = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +44,32 @@ public class scene_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        caption_text.text = caption_buffer;
+        if(cc_flag) caption_text.text = caption_buffer;
+    }
+
+    public void Start_Scene()
+    {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        script_controller.instance.Start_Script();
+        sequence_controller.instance.Sequence_Active = true;
+    }
+
+    public void Pause_Scene(bool status)
+    {
+        if (status)
+        {
+            Time.timeScale = 0;
+            aim_selector.instance.ToggleTarget(true);
+            Screen.sleepTimeout = SleepTimeout.SystemSetting;
+            audioManager.instance.Pause_Audio(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            aim_selector.instance.ToggleTarget(false);
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
+            audioManager.instance.Pause_Audio(false);
+        }
     }
 
     public void Clear_All_Spawns()
@@ -73,6 +113,15 @@ public class scene_manager : MonoBehaviour
         }
     }
 
+    public void Clear_Single_Spawn(string prefab_name)
+    {
+        foreach (Transform child in single_spawn.transform)
+        {
+            if (child.name.Contains(prefab_name)) Destroy(child.gameObject);
+        }
+    }
+
+
     public void Quad_Spawn(string prefab_name)
     {
         var loaded_resource = Resources.Load("Prefabs/" + prefab_name);
@@ -112,6 +161,12 @@ public class scene_manager : MonoBehaviour
     public void Update_Caption_Text(string text)
     {
         caption_buffer = text;
+    }
+
+    public void Play_Script_Line(int script_line_ID)
+    {
+        Play_Audio_File(lang_flag + "_" + script_line_ID);
+        Update_Caption_Text(script_controller.instance.Get_Script_Line(script_line_ID));
     }
 
     public void Play_Audio_File(string file_name)

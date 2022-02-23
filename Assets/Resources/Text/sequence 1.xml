@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sequence_container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sequence_Objects>
+    <!-- Create Fade Pane -->
+    <sequence_object>
+      <Start_Time>0</Start_Time>
+      <Event_Id>4</Event_Id>
+      <Prefab>Fade Plane</Prefab>
+    </sequence_object>
+
+    <!-- Fade Out -->
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Event_Id>50</Event_Id>
+    </sequence_object>
+
+    <!-- Clear Quad Spawns -->
+    <sequence_object>
+      <Start_Time>8</Start_Time>
+      <Event_Id>25</Event_Id>
+    </sequence_object>
+    
+    <!-- Spawn Office -->
+    <sequence_object>
+      <Start_Time>8</Start_Time>
+      <Event_Id>1</Event_Id>
+      <Prefab>Office Syringe System</Prefab>
+    </sequence_object>
+
+    <!-- Turn Off Blood Stream -->
+    <sequence_object>
+      <Start_Time>8</Start_Time>
+      <Event_Id>45</Event_Id>
+    </sequence_object>
+    
+    <!-- Fade In -->
+    <sequence_object>
+      <Start_Time>8</Start_Time>
+      <Event_Id>55</Event_Id>
+    </sequence_object>
+
+    <!-- Line 7 -->
+    <sequence_object>
+      <Start_Time>15</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>7</Script_Line_ID>
+    </sequence_object>
+
+    <!-- Syringe Fly -->
+    <sequence_object>
+      <Start_Time>15</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>6</Scene_ID>
+    </sequence_object>
+
+    <!-- Split Syringe -->
+    <sequence_object>
+      <Start_Time>23</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>7</Scene_ID>
+    </sequence_object>
+
+    <!-- Line 8 -->
+    <sequence_object>
+      <Start_Time>25</Start_Time>
+      <Event_Id>10</Event_Id>
+      <Script_Line_ID>8</Script_Line_ID>
+    </sequence_object>
+ 
+    <!-- Fade Out -->
+    <sequence_object>
+      <Start_Time>30</Start_Time>
+      <Event_Id>50</Event_Id>
+    </sequence_object>
+
+    <!-- Hide Syringe -->
+    <sequence_object>
+      <Start_Time>33</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>8</Scene_ID>
+    </sequence_object>
+
+    <!-- Change Skybox To Blood Stream -->
+    <sequence_object>
+      <Start_Time>33</Start_Time>
+      <Event_Id>35</Event_Id>
+    </sequence_object>
+
+    <!-- Remove Office Syringe System -->
+    <sequence_object>
+      <Start_Time>33</Start_Time>
+      <Event_Id>24</Event_Id>
+      <Prefab>Office Syringe System</Prefab>
+      <Scene_ID>0</Scene_ID>
+    </sequence_object>
+
+    <!-- Turn On Blood Stream -->
+    <sequence_object>
+      <Start_Time>33</Start_Time>
+      <Event_Id>40</Event_Id>
+    </sequence_object>
+
+    <!-- Fade In -->
+    <sequence_object>
+      <Start_Time>33</Start_Time>
+      <Event_Id>55</Event_Id>
+    </sequence_object>
+  </Sequence_Objects>
+</sequence_container>

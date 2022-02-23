@@ -14,20 +14,12 @@
       <Event_Id>10</Event_Id>
       <Script_Line_ID>1</Script_Line_ID>
     </sequence_object>
-    
+
     <!-- Cell Appears -->
     <sequence_object>
       <Start_Time>7</Start_Time>
       <Event_Id>2</Event_Id>
-      <Prefab>Cell</Prefab>
-      <Scene_ID>0</Scene_ID>
-    </sequence_object>
-    
-    <!-- Covid Cell Appears -->
-    <sequence_object>
-      <Start_Time>15</Start_Time>
-      <Event_Id>2</Event_Id>
-      <Prefab>Covid Cell</Prefab>
+      <Prefab>Covid Cell System</Prefab>
       <Scene_ID>0</Scene_ID>
     </sequence_object>
     
@@ -38,11 +30,18 @@
       <Script_Line_ID>2</Script_Line_ID>
     </sequence_object>
 
-    <!-- Trigger Scene 1 - Covid Cell Attacks -->
+    <!-- Covid Cell Appears-->
     <sequence_object>
-      <Start_Time>25</Start_Time>
+      <Start_Time>15</Start_Time>
       <Event_Id>3</Event_Id>
       <Scene_ID>1</Scene_ID>
+    </sequence_object>
+
+    <!-- Covid Cell Attacks -->
+    <sequence_object>
+      <Start_Time>20</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>2</Scene_ID>
     </sequence_object>
     
     <!-- Line 3 -->
@@ -50,6 +49,13 @@
       <Start_Time>25</Start_Time>
       <Event_Id>10</Event_Id>
       <Script_Line_ID>3</Script_Line_ID>
+    </sequence_object>
+    
+    <!-- Trigger Scene 2 - Cell Is Corrupted -->
+    <sequence_object>
+      <Start_Time>30</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>3</Scene_ID>
     </sequence_object>
 
     <!-- Line 4 -->
@@ -59,11 +65,11 @@
       <Script_Line_ID>4</Script_Line_ID>
     </sequence_object>
     
-    <!-- Trigger Scene 2 - Covid Cell Propogation -->
+    <!-- Trigger Scene 3 - Covid Cell Propogation -->
     <sequence_object>
       <Start_Time>35</Start_Time>
       <Event_Id>3</Event_Id>
-      <Scene_ID>2</Scene_ID>
+      <Scene_ID>4</Scene_ID>
     </sequence_object>
 
     <!-- Line 5 -->
@@ -91,11 +97,21 @@
       <Start_Time>63</Start_Time>
       <Event_Id>25</Event_Id>
     </sequence_object>
-    
-    <!-- Change Skybox To Office -->
+
+    <!-- Spawn Office -->
     <sequence_object>
       <Start_Time>63</Start_Time>
-      <Event_Id>30</Event_Id>
+      <Event_Id>1</Event_Id>
+      <Prefab>Office Temp</Prefab>
+      <Scene_ID>0</Scene_ID>
+    </sequence_object>
+
+    <!-- Spawn Syringe -->
+    <sequence_object>
+      <Start_Time>63</Start_Time>
+      <Event_Id>1</Event_Id>
+      <Prefab>Syringe MRNA System</Prefab>
+      <Scene_ID>0</Scene_ID>
     </sequence_object>
 
     <!-- Turn Off Blood Stream -->
@@ -103,7 +119,7 @@
       <Start_Time>63</Start_Time>
       <Event_Id>45</Event_Id>
     </sequence_object>
-    
+
     <!-- Fade In -->
     <sequence_object>
       <Start_Time>63</Start_Time>
@@ -116,52 +132,67 @@
       <Event_Id>10</Event_Id>
       <Script_Line_ID>7</Script_Line_ID>
     </sequence_object>
-    
-    <!-- Syringe MRNA System Appears -->
-    <sequence_object>
-      <Start_Time>65</Start_Time>
-      <Event_Id>4</Event_Id>
-      <Prefab>Syringe MRNA System</Prefab>
-    </sequence_object>
-    
+
     <!-- Line 8 -->
     <sequence_object>
-      <Start_Time>75</Start_Time>
+      <Start_Time>70</Start_Time>
       <Event_Id>10</Event_Id>
       <Script_Line_ID>8</Script_Line_ID>
     </sequence_object>
 
-    <!-- Syringe MRNA System Disapears -->
+    <!-- Split Syringe -->
     <sequence_object>
-      <Start_Time>80</Start_Time>
-      <Event_Id>23</Event_Id>
-      <Prefab>Syringe MRNA System</Prefab>
+      <Start_Time>71</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>8</Scene_ID>
     </sequence_object>
 
     <!-- Fade Out -->
     <sequence_object>
-      <Start_Time>80</Start_Time>
+      <Start_Time>75</Start_Time>
       <Event_Id>50</Event_Id>
+    </sequence_object>
+
+    <!-- Hide Syringe -->
+    <sequence_object>
+      <Start_Time>78</Start_Time>
+      <Event_Id>3</Event_Id>
+      <Scene_ID>9</Scene_ID>
     </sequence_object>
 
     <!-- Change Skybox To Blood Stream -->
     <sequence_object>
-      <Start_Time>83</Start_Time>
+      <Start_Time>78</Start_Time>
       <Event_Id>35</Event_Id>
+    </sequence_object>
+
+    <sequence_object>
+      <Start_Time>78</Start_Time>
+      <Event_Id>24</Event_Id>
+      <Prefab>Office Temp</Prefab>
+      <Scene_ID>0</Scene_ID>
     </sequence_object>
 
     <!-- Turn On Blood Stream -->
     <sequence_object>
-      <Start_Time>83</Start_Time>
+      <Start_Time>78</Start_Time>
       <Event_Id>40</Event_Id>
     </sequence_object>
 
     <!-- Fade In -->
     <sequence_object>
-      <Start_Time>83</Start_Time>
+      <Start_Time>78</Start_Time>
       <Event_Id>55</Event_Id>
     </sequence_object>
-    
+
+    <!-- Cell Appears -->
+    <sequence_object>
+      <Start_Time>85</Start_Time>
+      <Event_Id>2</Event_Id>
+      <Prefab>Cell</Prefab>
+      <Scene_ID>0</Scene_ID>
+    </sequence_object>
+
     <!-- Line 9 -->
     <sequence_object>
       <Start_Time>85</Start_Time>
