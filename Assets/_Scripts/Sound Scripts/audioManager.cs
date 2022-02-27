@@ -13,7 +13,6 @@ public class audioManager : MonoBehaviour
         instance = this;
     }
 
-
     public void Play(string name)
     {
         for (int i = 0; i < sounds.Length; i++)
@@ -23,6 +22,11 @@ public class audioManager : MonoBehaviour
                 GetComponent<AudioSource>().PlayOneShot(sounds[i]);
             }
         }
+    }
+
+    public void Stop()
+    {
+        GetComponent<AudioSource>().Stop();
     }
 
     public void Pause_Audio(bool value)

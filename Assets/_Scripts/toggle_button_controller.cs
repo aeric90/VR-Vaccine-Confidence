@@ -18,23 +18,23 @@ using UnityEngine;
 
 public class toggle_button_controller : MonoBehaviour
 {
-    public Material InactiveMaterial;
-    public Material InactiveGazeMaterial;
-    public Material ActiveMaterial;
-    public Material ActiveGazeMaterial;
+    public Sprite InactiveMaterial;
+    public Sprite InactiveGazeMaterial;
+    public Sprite ActiveMaterial;
+    public Sprite ActiveGazeMaterial;
 
     public toggle_button_controller paired_control;
 
-    public string value;
+    public string button_type;
+    public string button_flag;
 
     private bool activated = false;
-    private Renderer _myRenderer;
+    private SpriteRenderer _myRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        _myRenderer = GetComponent<Renderer>();
-        SetGazeMaterial(false);
+        _myRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -45,19 +45,29 @@ public class toggle_button_controller : MonoBehaviour
 
     public void OnPointerEnter()
     {
-        SetGazeMaterial(true);
+
     }
 
     public void OnPointerExit()
     {
-        SetGazeMaterial(false);
+
     }
 
     public void OnPointerClick()
     {
         ChangeStatus(!activated);
 
+        if (button_type == "lang")
+        {
+            ui_controller.instance.SetLangFlag(button_flag);
+        }
+        if (button_type == "cc")
+        {
+            ui_controller.instance.SetCCFlag(button_flag);
+        }
+
         if (paired_control != null) paired_control.ChangeStatus(!activated);
+        ui_controller.instance.Change_Start_Text();
     }
 
     public void ChangeStatus(bool status)
@@ -65,23 +75,27 @@ public class toggle_button_controller : MonoBehaviour
         activated = status;
         SetActiveMaterial(status);
         SetGazeMaterial(false);
-        if (status) ui_controller.instance.Set_Flags(value);
     }
 
     private void SetGazeMaterial(bool gazedAt)
     {
         if(!activated)
         {
-            _myRenderer.material = gazedAt ? InactiveGazeMaterial : InactiveMaterial;
+            _myRenderer.sprite = gazedAt ? InactiveGazeMaterial : InactiveMaterial;
         }
         else 
         {
-            _myRenderer.material = gazedAt ? ActiveGazeMaterial : ActiveMaterial;
+            _myRenderer.sprite = gazedAt ? ActiveGazeMaterial : ActiveMaterial;
         }
     }
 
     private void SetActiveMaterial(bool gazedAt)
     {
-        _myRenderer.material = gazedAt ? ActiveMaterial : InactiveMaterial;
+        _myRenderer.sprite = gazedAt ? ActiveMaterial : InactiveMaterial;
+    }
+
+    public bool GetActiveStatus()
+    {
+        return _myRenderer.sprite == ActiveMaterial;
     }
 }

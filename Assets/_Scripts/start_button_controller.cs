@@ -52,7 +52,7 @@ public class start_button_controller : MonoBehaviour
 
     public void OnPointerClick()
     {
-        ui_controller.instance.Start_Program(button_flag);
+        ui_controller.instance.Start_Program();
     }
 
     public void ChangeStatus(bool status)

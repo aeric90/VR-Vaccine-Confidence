@@ -6,15 +6,19 @@ public class ui_controller : MonoBehaviour
 {
     public static ui_controller instance;
 
+    public GameObject read_fade_plane;
+    public GameObject pause_plane;
     public GameObject lang_UI;
     public GameObject title_UI;
     public GameObject start_UI;
-    //public GameObject cc_UI;
+    public GameObject CC_UI;
+    public GameObject pause_UI;
+
     public GameObject Start_Button;
     public GameObject Pause_Button;
 
-    //private string lang_flag = "EN";
-    private bool cc_flag = false;
+    private string lang_flag = "EN";
+    private string cc_flag = "off";
 
     // Start is called before the first frame update
     void Start()
@@ -29,52 +33,101 @@ public class ui_controller : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Hide_Start_UI();
             scene_manager.instance.Lang_Flag = "EN";
             script_controller.instance.Start_Script();
             aim_selector.instance.ToggleTarget(false);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Hide_Start_UI();
             scene_manager.instance.Lang_Flag = "FR";
             script_controller.instance.Start_Script();
             aim_selector.instance.ToggleTarget(false);
         }
     }
 
-    public void Hide_Start_UI()
-    {
-        start_UI.SetActive(false);
-    }
-
-    public void Set_Flags(string flag)
-    {
-        //if (flag == "EN") lang_flag = "EN";
-        //if (flag == "FR") lang_flag = "FR";
-        if (flag == "CC") cc_flag = !cc_flag;
-    }
-
     public void Select_Language(string lang_flag)
-    { 
-        // Store language flag
+    {
+        this.lang_flag = lang_flag;
         // Fade Out?
-        // Hide the language UI
-        // Show the Title UI
+        title_UI.GetComponent<title_ui_controller>().Set_Title_Text(lang_flag);
+        lang_UI.SetActive(false);
+        title_UI.SetActive(true);
         // Fade In?
     }
 
-
-
-    public void Start_Program(string lang_flag)
+    public void Select_Begin()
     {
-        Hide_Start_UI();
+        // Fade Out?
+        CC_UI.GetComponent<cc_ui_controller>().Set_CC_Text(lang_flag);
+        title_UI.SetActive(false);
+        CC_UI.SetActive(true);
+        // Fade In?
+    }
+
+    public void Select_CC(string cc_flag)
+    {
+        this.cc_flag = cc_flag;
+        // Fade Out?
+        start_UI.GetComponent<start_ui_controller>().Set_Start_Text(lang_flag, cc_flag);
+        CC_UI.SetActive(false);
+        start_UI.SetActive(true);
+        // Fade In?
+    }
+
+    public void Select_Pause()
+    {
+        pause_UI.GetComponent<pause_ui_controller>().Set_Pause_Text(lang_flag, cc_flag);
+        pause_UI.SetActive(true);
+    }
+
+    public void Hide_Pause()
+    {
+        pause_UI.SetActive(false);
+    }
+
+    public void Change_Start_Text()
+    {
+        start_UI.GetComponent<start_ui_controller>().Set_Start_Text(lang_flag, cc_flag);
+    }
+
+    public void Start_Program()
+    {
+        scene_manager.instance.Turn_Rear_Fade_Off();
+        start_UI.SetActive(false);
         scene_manager.instance.Lang_Flag = lang_flag;
-        scene_manager.instance.CC_Flag = true;
+        if (cc_flag == "yes")
+        {
+            scene_manager.instance.CC_Flag = true;
+        } else
+        {
+            scene_manager.instance.CC_Flag = false;
+        }
         // Caption Toggle
         aim_selector.instance.ToggleTarget(false);
         Toggle_Pause();
         scene_manager.instance.Start_Scene();
+    }
+
+    public void SetLangFlag(string lang_flag)
+    {
+        this.lang_flag = lang_flag;
+    }
+    public void SetCCFlag(string cc_flag)
+    {
+        this.cc_flag = cc_flag;
+        if (cc_flag == "yes")
+        {
+            scene_manager.instance.CC_Flag = true;
+        }
+        else
+        {
+            scene_manager.instance.CC_Flag = false;
+        }
+    }
+
+    public void Toggle_Pause_Plane()
+    {
+        pause_plane.SetActive(!pause_plane.activeSelf);
     }
 
     public void Toggle_Pause()

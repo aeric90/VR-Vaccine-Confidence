@@ -33,10 +33,30 @@ public class prompt_controller : MonoBehaviour
 
     public void OnPointerClick()
     {
-        if (button_type == "lang") { 
-            // Call ui_controller lang page selection function
+        if (button_type == "lang") {
+            ui_controller.instance.Select_Language(button_flag);
         }
-        if (button_type == "start") { ui_controller.instance.Start_Program(button_flag); }
+        if (button_type == "begin")
+        {
+            ui_controller.instance.Select_Begin();
+        }
+        if (button_type == "cc")
+        {
+            ui_controller.instance.Select_CC(button_flag);
+        }
+        if (button_type == "start")
+        { 
+            ui_controller.instance.Start_Program(); 
+        }
+        if (button_type == "resume")
+        {
+            scene_manager.instance.Pause_Scene(false);
+        }
+        if (button_type == "quit")
+        {
+            scene_manager.instance.Quit_Process();
+        }
+        SetGazeMaterial(false);
     }
 
     public void ChangeStatus(bool status)

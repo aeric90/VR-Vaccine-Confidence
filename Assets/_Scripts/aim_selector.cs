@@ -19,6 +19,7 @@ public class aim_selector : MonoBehaviour
     private bool hasClicked = false;
 
     public TMPro.TextMeshProUGUI countDown;
+    public Image targetBG;
 
     private LayerMask UIMask;
 
@@ -38,10 +39,19 @@ public class aim_selector : MonoBehaviour
         {
             if (gazedAtObject != hit.transform.gameObject)
             {
-                gazedAtObject?.SendMessage("OnPointerExit");
-                gazedAtObject = hit.transform.gameObject;
-                gazedAtObject.SendMessage("OnPointerEnter");
-                StartSelecting();
+                toggle_button_controller toggle_instance = hit.transform.gameObject.GetComponent<toggle_button_controller>();
+
+                if (toggle_instance == null) { 
+                    gazedAtObject?.SendMessage("OnPointerExit");
+                    gazedAtObject = hit.transform.gameObject;
+                    gazedAtObject.SendMessage("OnPointerEnter");
+                    StartSelecting();
+                } else if (!toggle_instance.GetActiveStatus()) {
+                    gazedAtObject?.SendMessage("OnPointerExit");
+                    gazedAtObject = hit.transform.gameObject;
+                    gazedAtObject.SendMessage("OnPointerEnter");
+                    StartSelecting();
+                }
             }
         }
         else
@@ -62,6 +72,7 @@ public class aim_selector : MonoBehaviour
                     gazedAtObject?.SendMessage("OnPointerClick");
                     currentSelectionTime = 0;
                     hasClicked = true;
+                    StopSelecting();
                 }
             }
 
@@ -92,6 +103,7 @@ public class aim_selector : MonoBehaviour
     {
         if (isSelecting)
         {
+            targetBG.enabled = true;
             progressBar.fillAmount = Mathf.InverseLerp(0, selectionTime, currentSelectionTime);
             if (currentSelectionTime > 2) { countDown.text = "1"; }
             else if (currentSelectionTime > 1) { countDown.text = "2"; }
@@ -100,6 +112,7 @@ public class aim_selector : MonoBehaviour
 
     public void StopSelecting()
     {
+        targetBG.enabled = false;
         progressBar.enabled = false;
         isSelecting = false;
         hasClicked = false;

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class pause_button_controller : MonoBehaviour
 {
-    private bool isPaused = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +18,6 @@ public class pause_button_controller : MonoBehaviour
 
     public void OnPointerClick()
     {
-        isPaused = !isPaused;
-        scene_manager.instance.Pause_Scene(isPaused);
+        scene_manager.instance.Pause_Scene(true);
     }
 }

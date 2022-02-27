@@ -18,6 +18,7 @@ public class scene_manager : MonoBehaviour
 
     private string caption_buffer = "";
     private int scene_state = 0;
+    private bool rear_fade_state = true;
     private bool fade_state = false;
 
     private string lang_flag = "EN"; // Language flag used to select subtitle and audio files.
@@ -44,7 +45,13 @@ public class scene_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cc_flag) caption_text.text = caption_buffer;
+        if (cc_flag)
+        {
+            caption_text.text = caption_buffer;
+        } else
+        {
+            caption_text.text = "";
+        }
     }
 
     public void Start_Scene()
@@ -59,16 +66,28 @@ public class scene_manager : MonoBehaviour
         if (status)
         {
             Time.timeScale = 0;
-            aim_selector.instance.ToggleTarget(true);
-            Screen.sleepTimeout = SleepTimeout.SystemSetting;
+
             audioManager.instance.Pause_Audio(true);
+
+            aim_selector.instance.ToggleTarget(true);
+            ui_controller.instance.Toggle_Pause();
+            ui_controller.instance.Toggle_Pause_Plane();
+            ui_controller.instance.Select_Pause();
+
+            Screen.sleepTimeout = SleepTimeout.SystemSetting;
         }
         else
         {
             Time.timeScale = 1;
-            aim_selector.instance.ToggleTarget(false);
-            Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
             audioManager.instance.Pause_Audio(false);
+
+            aim_selector.instance.ToggleTarget(false);
+            ui_controller.instance.Toggle_Pause();
+            ui_controller.instance.Toggle_Pause_Plane();
+            ui_controller.instance.Hide_Pause();
+
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
         }
     }
 
@@ -158,6 +177,14 @@ public class scene_manager : MonoBehaviour
         }
     }
 
+    public void Clear_Camera_Spawn()
+    {
+        foreach (Transform child in camera_spawn.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
     public void Update_Caption_Text(string text)
     {
         caption_buffer = text;
@@ -197,5 +224,25 @@ public class scene_manager : MonoBehaviour
     public void Turn_Fade_Off()
     {
         fade_state = false;
+    }
+
+    public bool Get_Rear_Fade_State()
+    {
+        return rear_fade_state;
+    }
+
+    public void Turn_Rear_Fade_On()
+    {
+        rear_fade_state = true;
+    }
+
+    public void Turn_Rear_Fade_Off()
+    {
+        rear_fade_state = false;
+    }
+
+    public void Quit_Process()
+    {
+        Application.Quit();
     }
 }
