@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class covid_cell_controller : MonoBehaviour
+public class hero_antibody_controller : MonoBehaviour
 {
     private Animator animator;
 

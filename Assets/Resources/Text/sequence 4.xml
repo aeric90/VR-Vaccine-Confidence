@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sequence_container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sequence_Objects>
+    <!-- Set Start Scene Appear -->
+    <!-- Create Fade Pane -->
+    <sequence_object>
+      <Start_Time>0</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>3</Event_Id>
+          <Scene_ID>19</Scene_ID>
+        </sequence_event>
+        <sequence_event>
+          <Event_Id>4</Event_Id>
+          <Prefab>Fade Plane</Prefab>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
+    <!-- Spawn COVID Anitbody System -->
+    <sequence_object>
+      <Start_Time>3</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>2</Event_Id>
+          <Prefab>Covid Antibody System</Prefab>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
+    <!-- COVID Cell Appears -->
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>3</Event_Id>
+          <Scene_ID>20</Scene_ID>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
+    <!-- Antibodies Attack -->
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>3</Event_Id>
+          <Scene_ID>21</Scene_ID>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+    
+  </Sequence_Objects>
+</sequence_container>

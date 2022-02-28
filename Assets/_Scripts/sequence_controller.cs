@@ -205,6 +205,7 @@ public class sequence_event
                                 scene_manager.instance.Quad_Spawn(e.Prefab);
                                 break;
                             case 3:
+                                print(e.Scene_ID);
                                 scene_manager.instance.Set_Scene_State_ID(e.Scene_ID);
                                 break;
                             case 4:
