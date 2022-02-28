@@ -19,10 +19,8 @@ public class cell_controller : MonoBehaviour
     void Update()
     {
         animator.SetInteger("scene_state", scene_manager.instance.Get_Scene_State_ID());
-
         if (scene_manager.instance.Get_Scene_State_ID() == 4) covid_particles.SetActive(true);
-
         if (scene_manager.instance.Get_Scene_State_ID() == 10) protein_particles.SetActive(true);
-
+        if (scene_manager.instance.Get_Scene_State_ID() == 12) protein_particles.GetComponent<ParticleSystem>().Stop();
     }
 }

@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class white_blood_cell_controller : MonoBehaviour
+public class hero_spike_controller : MonoBehaviour
 {
     private Animator animator;
-    public GameObject anti_body_particles;
-
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +16,5 @@ public class white_blood_cell_controller : MonoBehaviour
     void Update()
     {
         animator.SetInteger("scene_state", scene_manager.instance.Get_Scene_State_ID());
-
-        if (scene_manager.instance.Get_Scene_State_ID() == 18) anti_body_particles.SetActive(true);
     }
 }

@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b885acf40fe3a54faf379c7805d48ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sequence_file: {fileID: 4900000, guid: 46ba76932aab1f5469040262587b5829, type: 3}
+  sequence_file: {fileID: 4900000, guid: dd1cd2cf92de71f4fa06ef8706d693a7, type: 3}
 --- !u!4 &2027701793
 Transform:
   m_ObjectHideFlags: 0
@@ -886,12 +886,12 @@ PrefabInstance:
     - target: {fileID: 5386374438283877496, guid: d73d2012fbc4dfb45a6be4bfcaf34aac,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487225711550330067, guid: d73d2012fbc4dfb45a6be4bfcaf34aac,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7341962336581763734, guid: d73d2012fbc4dfb45a6be4bfcaf34aac,
         type: 3}
