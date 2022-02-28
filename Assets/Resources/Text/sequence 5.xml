@@ -8,7 +8,7 @@
       <Sequence_Events>
         <sequence_event>
           <Event_Id>3</Event_Id>
-          <Scene_ID>18</Scene_ID>
+          <Scene_ID>21</Scene_ID>
         </sequence_event>
         <sequence_event>
           <Event_Id>4</Event_Id>
@@ -23,40 +23,62 @@
       <Sequence_Events>
         <sequence_event>
           <Event_Id>2</Event_Id>
-          <Prefab>Covid Antibody System</Prefab>
+          <Prefab>Anti-Covid Cell System</Prefab>
         </sequence_event>
       </Sequence_Events>
     </sequence_object>
 
-    <!-- COVID Cell Appears -->
+    <!-- Cell Appears -->
     <sequence_object>
       <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>3</Event_Id>
-          <Scene_ID>19</Scene_ID>
+          <Scene_ID>22</Scene_ID>
         </sequence_event>
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Antibodies Attack -->
+    <!-- Anti-COVID Cell Appears -->
     <sequence_object>
       <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>3</Event_Id>
-          <Scene_ID>20</Scene_ID>
+          <Scene_ID>23</Scene_ID>
         </sequence_event>
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Covid Cell Fly Away -->
+    <!-- Anti-COVID Cell Attacks -->
     <sequence_object>
-      <Start_Time>10</Start_Time>
+      <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>3</Event_Id>
-          <Scene_ID>21</Scene_ID>
+          <Scene_ID>24</Scene_ID>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
+    <!-- Anti-COVID Cell Drops Out -->
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>3</Event_Id>
+          <Scene_ID>25</Scene_ID>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
+    <!-- Cell Shrinks -->
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>3</Event_Id>
+          <Scene_ID>26</Scene_ID>
         </sequence_event>
       </Sequence_Events>
     </sequence_object>

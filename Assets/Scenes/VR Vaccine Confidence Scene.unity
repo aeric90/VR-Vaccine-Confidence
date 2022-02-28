@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b885acf40fe3a54faf379c7805d48ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sequence_file: {fileID: 4900000, guid: dd1cd2cf92de71f4fa06ef8706d693a7, type: 3}
+  sequence_file: {fileID: 4900000, guid: af77f36c9db33ad46aa2cd23638b0499, type: 3}
 --- !u!4 &2027701793
 Transform:
   m_ObjectHideFlags: 0

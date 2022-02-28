@@ -131,7 +131,6 @@
       </Sequence_Events>
     </sequence_object>
 
-
     <!-- COVID Cell Appears -->
     <sequence_object>
       <Start_Time>5</Start_Time>
@@ -144,12 +143,24 @@
     </sequence_object>
 
     <!-- Antibodies Attack -->
+    <!-- White Blood Cell Fly Away -->
     <sequence_object>
       <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>3</Event_Id>
           <Scene_ID>20</Scene_ID>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
+    <!-- Covid Cell Fly Away -->
+    <sequence_object>
+      <Start_Time>10</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>3</Event_Id>
+          <Scene_ID>21</Scene_ID>
         </sequence_event>
       </Sequence_Events>
     </sequence_object>

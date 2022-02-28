@@ -161,6 +161,16 @@ public class scene_manager : MonoBehaviour
             }
         }
     }
+    public void Clear_Quad_Spawn(string prefab_name)
+    {
+        foreach (GameObject spawn in quad_spawns)
+        {
+            foreach (Transform child in spawn.transform)
+            {
+                if (child.name.Contains(prefab_name)) Destroy(child.gameObject);
+            }
+        }
+    }
 
     public void Camera_Spawn(string prefab_name)
     {

@@ -205,7 +205,6 @@ public class sequence_event
                                 scene_manager.instance.Quad_Spawn(e.Prefab);
                                 break;
                             case 3:
-                                print(e.Scene_ID);
                                 scene_manager.instance.Set_Scene_State_ID(e.Scene_ID);
                                 break;
                             case 4:
@@ -236,6 +235,9 @@ public class sequence_event
                                 break;
                             case 25:
                                 scene_manager.instance.Clear_Quad_Spawn();
+                                break;
+                            case 26:
+                                scene_manager.instance.Clear_Quad_Spawn(e.Prefab);
                                 break;
                             case 30:
                                 scene_manager.instance.Skybox_To_Office();

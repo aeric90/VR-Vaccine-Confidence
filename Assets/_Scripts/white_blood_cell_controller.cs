@@ -20,5 +20,6 @@ public class white_blood_cell_controller : MonoBehaviour
         animator.SetInteger("scene_state", scene_manager.instance.Get_Scene_State_ID());
 
         if (scene_manager.instance.Get_Scene_State_ID() == 18) anti_body_particles.SetActive(true);
+        if (scene_manager.instance.Get_Scene_State_ID() == 20) anti_body_particles.GetComponent<ParticleSystem>().Stop();
     }
 }
