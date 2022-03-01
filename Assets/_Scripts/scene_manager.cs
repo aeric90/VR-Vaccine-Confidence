@@ -202,7 +202,7 @@ public class scene_manager : MonoBehaviour
 
     public void Play_Script_Line(int script_line_ID)
     {
-        Play_Audio_File(lang_flag + "_" + script_line_ID);
+        Play_Audio_File(script_line_ID + "_Nat_Narration_" + lang_flag);
         Update_Caption_Text(script_controller.instance.Get_Script_Line(script_line_ID));
     }
 
