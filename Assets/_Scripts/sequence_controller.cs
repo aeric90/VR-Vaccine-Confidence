@@ -158,6 +158,9 @@ public class sequence_event
 
     public TextAsset sequence_file;
 
+    public TextAsset EN_sequence_file;
+    public TextAsset FR_sequence_file;
+
     private bool sequence_active = false; // Only start processing the script when this bool is active.
 
     private float time_elapsed = 0.0f; // Will store the time in seconds elapsed during the program.
@@ -173,7 +176,7 @@ public class sequence_event
     // Start is called before the first frame update
     void Start()
     {
-        Import_Sequence();
+
     }
 
     // Update is called once per frame
@@ -257,6 +260,12 @@ public class sequence_event
                             case 55:
                                 scene_manager.instance.Turn_Fade_Off();
                                 break;
+                            case 60:
+                                music_controller.instance.Play();
+                                break;
+                            case 65:
+                                music_controller.instance.Trigger_Fade();
+                                break;
                         }
                     }
 
@@ -271,9 +280,18 @@ public class sequence_event
 
     public void Import_Sequence()
     {
-        Debug.Log(sequence_file.text);
         XmlSerializer serializer = new XmlSerializer(sequence.GetType());
-        var reader = new System.IO.StringReader(sequence_file.text);
+        StringReader reader = null;
+
+        if (scene_manager.instance.Lang_Flag == "EN")
+        {
+            reader = new System.IO.StringReader(EN_sequence_file.text);
+        }
+        else if (scene_manager.instance.Lang_Flag == "FR")
+        {
+            reader = new System.IO.StringReader(FR_sequence_file.text);
+        }
+
         sequence = serializer.Deserialize(reader) as sequence_container;
     }
 }

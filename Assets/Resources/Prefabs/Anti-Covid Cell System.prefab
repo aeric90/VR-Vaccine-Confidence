@@ -44,7 +44,7 @@ Animator:
   m_GameObject: {fileID: 6100609286378193839}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 550b0b2acc0678e469740916223dfbf1, type: 2}
+  m_Controller: {fileID: 9100000, guid: ba1683ac857d5424ca4f829a17c38384, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -136,6 +136,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6100609286378193808}
     m_Modifications:
+    - target: {fileID: 4381974883676804948, guid: ab6d952b294083d44b3ebcaa99c315d8,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381974883676804948, guid: ab6d952b294083d44b3ebcaa99c315d8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381974883676804948, guid: ab6d952b294083d44b3ebcaa99c315d8,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4622652483263967140, guid: ab6d952b294083d44b3ebcaa99c315d8,
         type: 3}
       propertyPath: m_Controller
@@ -215,6 +230,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001603660689034914, guid: ab6d952b294083d44b3ebcaa99c315d8,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001603660689034914, guid: ab6d952b294083d44b3ebcaa99c315d8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001603660689034914, guid: ab6d952b294083d44b3ebcaa99c315d8,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 910644583993673298, guid: ab6d952b294083d44b3ebcaa99c315d8, type: 3}

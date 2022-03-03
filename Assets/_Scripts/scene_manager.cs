@@ -58,6 +58,7 @@ public class scene_manager : MonoBehaviour
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         script_controller.instance.Start_Script();
+        sequence_controller.instance.Import_Sequence();
         sequence_controller.instance.Sequence_Active = true;
     }
 
@@ -68,6 +69,7 @@ public class scene_manager : MonoBehaviour
             Time.timeScale = 0;
 
             audioManager.instance.Pause_Audio(true);
+            music_controller.instance.Pause_Audio(true);
 
             aim_selector.instance.ToggleTarget(true);
             ui_controller.instance.Toggle_Pause();
@@ -81,6 +83,7 @@ public class scene_manager : MonoBehaviour
             Time.timeScale = 1;
 
             audioManager.instance.Pause_Audio(false);
+            music_controller.instance.Pause_Audio(false);
 
             aim_selector.instance.ToggleTarget(false);
             ui_controller.instance.Toggle_Pause();
