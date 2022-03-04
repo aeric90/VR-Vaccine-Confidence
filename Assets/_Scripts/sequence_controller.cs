@@ -156,6 +156,7 @@ public class sequence_event
         if (instance == null) instance = this;
     }
 
+    public bool test_sequence;
     public TextAsset sequence_file;
 
     public TextAsset EN_sequence_file;
@@ -266,6 +267,18 @@ public class sequence_event
                             case 65:
                                 music_controller.instance.Trigger_Fade();
                                 break;
+                            case 70:
+                                scene_manager.instance.Turn_Rear_Fade_On();
+                                break;
+                            case 75:
+                                scene_manager.instance.Turn_Rear_Fade_Off();
+                                break;
+                            case 80:
+                                ui_controller.instance.Toggle_Logo_UI();
+                                break;
+                            case 99:
+                                scene_manager.instance.End_Scene();
+                                break;
                         }
                     }
 
@@ -283,15 +296,29 @@ public class sequence_event
         XmlSerializer serializer = new XmlSerializer(sequence.GetType());
         StringReader reader = null;
 
-        if (scene_manager.instance.Lang_Flag == "EN")
+        if (test_sequence)
         {
-            reader = new System.IO.StringReader(EN_sequence_file.text);
+            reader = new System.IO.StringReader(sequence_file.text);
         }
-        else if (scene_manager.instance.Lang_Flag == "FR")
+        else
         {
-            reader = new System.IO.StringReader(FR_sequence_file.text);
+            if (scene_manager.instance.Lang_Flag == "EN")
+            {
+                reader = new System.IO.StringReader(EN_sequence_file.text);
+            }
+            else if (scene_manager.instance.Lang_Flag == "FR")
+            {
+                reader = new System.IO.StringReader(FR_sequence_file.text);
+            }
         }
 
         sequence = serializer.Deserialize(reader) as sequence_container;
+    }
+
+    public void End_Sequence()
+    {
+        sequence_active = false;
+        current_sequence_id = 0;
+        time_elapsed = 0.0f;
     }
 }

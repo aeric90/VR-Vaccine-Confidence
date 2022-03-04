@@ -20,7 +20,7 @@ public class music_controller : MonoBehaviour
             
             if(music_volume > 0.0f)
             {
-                music_volume -= 0.0001f;
+                music_volume -= 0.001f;
                 GetComponent<AudioSource>().volume = music_volume;
             } else
             {

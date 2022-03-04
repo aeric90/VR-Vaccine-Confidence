@@ -539,11 +539,11 @@
         </sequence_event>
       </Sequence_Events>
     </sequence_object>
-    
+
     <!-- Clear Quad Spawns -->
     <!-- Turn Off Blood Stream -->
-    <!-- Turn On Rear Fade ** -->
-    <!-- Spawn Sponsor Logos ** -->
+    <!-- Turn On Rear Fade -->
+    <!-- Spawn Sponsor Logos -->
     <!-- Fade In -->
     <sequence_object>
       <Start_Time>3</Start_Time>
@@ -554,9 +554,18 @@
         <sequence_event>
           <Event_Id>45</Event_Id>
         </sequence_event>
+        <sequence_event>
+          <Event_Id>70</Event_Id>
+        </sequence_event>
+        <sequence_event>
+          <Event_Id>55</Event_Id>
+        </sequence_event>
+        <sequence_event>
+          <Event_Id>80</Event_Id>
+        </sequence_event>
       </Sequence_Events>
     </sequence_object>
-    
+
     <!-- Line 17 -->
     <sequence_object>
       <Start_Time>5</Start_Time>
@@ -570,16 +579,34 @@
 
     <!-- Fade Music -->
     <!-- Fade Out -->
-    <!-- Remove Sponsor Logos -->
-    <!-- Reset To Start -->
     <sequence_object>
-      <Start_Time>10</Start_Time>
+      <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>65</Event_Id>
         </sequence_event>
         <sequence_event>
           <Event_Id>50</Event_Id>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
+    <!-- Remove Sponsor Logos -->
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>80</Event_Id>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
+    <!--End Sequence -->
+    <sequence_object>
+      <Start_Time>5</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>99</Event_Id>
         </sequence_event>
       </Sequence_Events>
     </sequence_object>

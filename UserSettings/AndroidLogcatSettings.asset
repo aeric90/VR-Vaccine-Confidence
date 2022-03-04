@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "12231FDD4001J4",
         "name": "com.CarletonUniversity.VRVaccineConfidence",
-        "processId": 7951,
+        "processId": 12510,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,12 +12,42 @@
             "deviceId": "12231FDD4001J4",
             "name": "com.CarletonUniversity.VRVaccineConfidence",
             "processId": 25082,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "12231FDD4001J4",
             "name": "com.CarletonUniversity.VRVaccineConfidence",
             "processId": 7951,
+            "exited": true
+        },
+        {
+            "deviceId": "12231FDD4001J4",
+            "name": "com.google.android.apps.nexuslauncher",
+            "processId": 28041,
+            "exited": false
+        },
+        {
+            "deviceId": "12231FDD4001J4",
+            "name": "com.android.settings",
+            "processId": 9454,
+            "exited": false
+        },
+        {
+            "deviceId": "12231FDD4001J4",
+            "name": "com.CarletonUniversity.VRVaccineConfidence",
+            "processId": 9286,
+            "exited": false
+        },
+        {
+            "deviceId": "12231FDD4001J4",
+            "name": "com.CarletonUniversity.VRVaccineConfidence",
+            "processId": 11370,
+            "exited": false
+        },
+        {
+            "deviceId": "12231FDD4001J4",
+            "name": "com.CarletonUniversity.VRVaccineConfidence",
+            "processId": 12510,
             "exited": false
         }
     ],

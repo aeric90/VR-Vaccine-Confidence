@@ -13,7 +13,7 @@ public class ui_controller : MonoBehaviour
     public GameObject start_UI;
     public GameObject CC_UI;
     public GameObject pause_UI;
-
+    public GameObject logo_UI;
     public GameObject Start_Button;
     public GameObject Pause_Button;
 
@@ -133,5 +133,21 @@ public class ui_controller : MonoBehaviour
     public void Toggle_Pause()
     {
         Pause_Button.SetActive(!Pause_Button.activeSelf);
+    }
+
+    public void Toggle_Logo_UI()
+    {
+        logo_UI.SetActive(!logo_UI.activeSelf);
+    }
+
+    public void Show_Language_UI()
+    {
+        lang_UI.SetActive(true);
+    }
+
+    public void UI_Reset()
+    {
+        lang_UI.SetActive(true);
+        logo_UI.SetActive(false);
     }
 }

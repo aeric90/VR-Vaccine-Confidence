@@ -62,6 +62,17 @@ public class scene_manager : MonoBehaviour
         sequence_controller.instance.Sequence_Active = true;
     }
 
+    public void End_Scene()
+    {
+        caption_buffer = "";
+        Screen.sleepTimeout = SleepTimeout.SystemSetting;
+        sequence_controller.instance.End_Sequence();
+        ui_controller.instance.Toggle_Pause();
+        ui_controller.instance.UI_Reset();
+        aim_selector.instance.ToggleTarget(true);
+        Turn_Fade_Off();
+    }
+
     public void Pause_Scene(bool status)
     {
         if (status)
@@ -256,6 +267,12 @@ public class scene_manager : MonoBehaviour
 
     public void Quit_Process()
     {
-        Application.Quit();
+        audioManager.instance.Stop();
+        music_controller.instance.Stop();
+        Pause_Scene(false);
+        End_Scene();
+        Clear_All_Spawns();
+        Stop_Blood_Stream();
+        Turn_Rear_Fade_On();
     }
 }
