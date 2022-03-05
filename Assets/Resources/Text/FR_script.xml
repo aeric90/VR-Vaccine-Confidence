@@ -35,22 +35,26 @@
 		</script_object>
 		<script_object>
 			<Script_ID>9</Script_ID>
-			<Script_Text>Le vaccin à ARNm apprend à notre système immunitaire à reconnaître les spicules extérieurs du virus de la COVID-19. Détachés du reste du virus, ces spicules sont inoffensifs. </Script_Text>
+			<Script_Text>Le vaccin à ARNm apprend à notre système immunitaire à reconnaître les spicules extérieurs du virus de la COVID-19. </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>10</Script_ID>
-			<Script_Text>Le vaccin ARNm contient notamment de l’information permettant à notre organisme de fabriquer lui‑même des spicules et de s’exercer ensuite à les repérer et à lutter contre en produisant des anticorps.  </Script_Text>
+			<Script_Text>Détachés du reste du virus, ces spicules sont inoffensifs. </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>11</Script_ID>
-			<Script_Text>Ce sont en quelque sorte des muselières pour virus, qui se fixent au virus de la COVID-19 et empêchent les spicules de l’aider à infecter une autre cellule, faisant ainsi échouer son projet. </Script_Text>
+			<Script_Text>Le vaccin ARNm contient notamment de l’information permettant à notre organisme de fabriquer lui‑même des spicules et de s’exercer ensuite à les repérer et à lutter contre en produisant des anticorps.  </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>12</Script_ID>
-			<Script_Text>Grâce au vaccin, notre organisme a déjà appris à fabriquer des anticorps. Nous sommes donc prêts à lutter contre la COVID-19 dès que nous sommes infectés. </Script_Text>
+			<Script_Text>Ce sont en quelque sorte des muselières pour virus, qui se fixent au virus de la COVID-19 et empêchent les spicules de l’aider à infecter une autre cellule, faisant ainsi échouer son projet. </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>13</Script_ID>
+			<Script_Text>Grâce au vaccin, notre organisme a déjà appris à fabriquer des anticorps. Nous sommes donc prêts à lutter contre la COVID-19 dès que nous sommes infectés. </Script_Text>
+		</script_object>
+		<script_object>
+			<Script_ID>14</Script_ID>
 			<Script_Text>Les vaccins à ARNm contre la COVID-19 ont été testés par des scientifiques et approuvés par des organismes gouvernementaux de règlementation. Ce sont des moyens sécuritaires et efficaces de nous protéger contre les infections au virus de la COVID-19.  </Script_Text>
 		</script_object>
 	</Script_Objects>

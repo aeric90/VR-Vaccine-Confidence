@@ -305,7 +305,6 @@
     </sequence_object>
 
     <!-- White Blood Cell Appear -->
-    <!-- Line 13 -->
     <sequence_object>
       <Start_Time>4</Start_Time>
       <Sequence_Events>
