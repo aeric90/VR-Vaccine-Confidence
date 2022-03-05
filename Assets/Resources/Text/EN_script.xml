@@ -3,55 +3,75 @@
 	<Script_Objects>
 		<script_object>
 			<Script_ID>1</Script_ID>
-			<Script_Text>To understand how mRNA vaccines protect us from COVID-19, we need to know exactly how the virus infects our body.  </Script_Text>
+			<Script_Text>To understand how mRNA vaccines protect us from COVID-19, we need to know exactly how the virus infects our bodies.  </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>2</Script_ID>
-			<Script_Text>When a COVID-19 virus enters our body , it uses specialized spikes on its exterior to attach to our cells.</Script_Text>
+			<Script_Text>When a COVID-19 virus enters our bodies,</Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>3</Script_ID>
-			<Script_Text>Once COVID-19 attaches, the virus inserts its genetic code, called RNA, into a cell to seize control.</Script_Text>
+			<Script_Text>it uses specialized spikes on its exterior to attach to our cells.</Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>4</Script_ID>
-			<Script_Text>The virus’s genetic material tells the human cell to stop its normal job and focus on making COVID-19 instead. </Script_Text>
+			<Script_Text>Once COVID-19 attaches, the virus inserts its genetic code, called RNA, into a cell to seize control.</Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>5</Script_ID>
-			<Script_Text>This turns our healthy cells into virus factories that then release more viruses that can then infect other cells.</Script_Text>
+			<Script_Text>The virus’s genetic material tells the human cell to stop its normal job and focus on making COVID-19 instead. </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>6</Script_ID>
-			<Script_Text>Because our cells are busy making COVID-19 instead of doing their jobs to keep us alive, we get really sick.</Script_Text>
+			<Script_Text>This turns our healthy cells into virus factories that then release more viruses that can then infect other cells.</Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>7</Script_ID>
-			<Script_Text>Vaccination is a way to teach our immune system to fight COVID-19 before the virus can make us very sick. </Script_Text>
+			<Script_Text>Because our cells are busy making COVID-19 instead of doing their jobs to keep us alive, we get really sick.</Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>8</Script_ID>
-			<Script_Text>To do so, a vaccine trains our immune system to recognize the spikes on COVID-19 and to destroy the virus.</Script_Text>
+			<Script_Text>Vaccination is a way to teach our immune system to fight COVID-19 before the virus can make us very sick. </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>9</Script_ID>
-			<Script_Text>The mRNA vaccine teaches our immune system to recognize COVID-19’s exterior spikes. Without the rest of the virus attached, these spikes are harmless. </Script_Text>
+			<Script_Text>To do so, a vaccine trains our immune system to recognize the spikes on COVID-19 and to destroy the virus.</Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>10</Script_ID>
-			<Script_Text>In particular, the mRNA vaccine contains information so that our body can make the spikes itself, and then practice identifying and fighting the spikes by making antibodies.  </Script_Text>
+			<Script_Text>The mRNA vaccine teaches our immune system to recognize COVID-19’s exterior spikes. </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>11</Script_ID>
-			<Script_Text>Antibodies are like a virus muzzle. They attach themselves to the to the COVID-19 virus. This blocks the spikes from helping the virus infect a cell, making the virus unsuccessful. </Script_Text>
+			<Script_Text>Without the rest of the virus attached, these spikes are harmless. </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>12</Script_ID>
-			<Script_Text>Thanks to the vaccine, our bodies have already been trained to make these antibodies. So, we are ready to fight COVID-19 the moment we are infected. </Script_Text>
+			<Script_Text>In particular, the mRNA vaccine contains information so that our body can make the spikes itself...  </Script_Text>
 		</script_object>
 		<script_object>
 			<Script_ID>13</Script_ID>
-			<Script_Text>The COVID-19 mRNA vaccines have been tested by scientists and approved by government regulators . They are a safe and effective way to defend ourselves against COVID-19 infections.  </Script_Text>
+			<Script_Text>...and then practice identifying and fighting the spikes by making antibodies. </Script_Text>
+		</script_object>
+		<script_object>
+			<Script_ID>14</Script_ID>
+			<Script_Text>Antibodies are like a virus muzzle. </Script_Text>
+		</script_object>
+		<script_object>
+			<Script_ID>15</Script_ID>
+			<Script_Text>They attach themselves to the to the COVID-19 virus. </Script_Text>
+		</script_object>
+		<script_object>
+			<Script_ID>16</Script_ID>
+			<Script_Text>This blocks the spikes from helping the virus infect a cell, making the virus unsuccessful. </Script_Text>
+		</script_object>
+		<script_object>
+			<Script_ID>17</Script_ID>
+			<Script_Text>Thanks to the vaccine, our bodies have already been trained to make these antibodies. So, we are ready to fight COVID-19 the moment we are infected. </Script_Text>
+		</script_object>
+		<script_object>
+			<Script_ID>18 </Script_ID>
+			<Script_Text>The COVID-19 mRNA vaccines have been tested by scientists and approved by government regulators. They are a safe and effective way to defend ourselves against COVID-19 infections.  </Script_Text>
 		</script_object>
 	</Script_Objects>
 </script_container>

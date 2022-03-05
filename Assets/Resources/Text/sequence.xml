@@ -46,7 +46,7 @@
     <!-- Line 2 -->
     <!-- Covid Cell Appears-->
     <sequence_object>
-      <Start_Time>3</Start_Time>
+      <Start_Time>7</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>

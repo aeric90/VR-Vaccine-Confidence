@@ -46,7 +46,7 @@
     <!-- Line 2 -->
     <!-- Covid Cell Appears-->
     <sequence_object>
-      <Start_Time>3</Start_Time>
+      <Start_Time>7</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
@@ -59,10 +59,15 @@
       </Sequence_Events>
     </sequence_object>
 
+    <!-- Line 3 -->
     <!-- Covid Cell Attacks -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>3</Start_Time>
       <Sequence_Events>
+        <sequence_event>
+          <Event_Id>10</Event_Id>
+          <Script_Line_ID>3</Script_Line_ID>
+        </sequence_event>  
         <sequence_event>
           <Event_Id>3</Event_Id>
           <Scene_ID>2</Scene_ID>
@@ -70,13 +75,14 @@
       </Sequence_Events>
     </sequence_object>
     
-    <!-- Line 3 -->
+    
+    <!-- Line 4 -->
     <sequence_object>
       <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>3</Script_Line_ID>
+          <Script_Line_ID>4</Script_Line_ID>
         </sequence_event>
       </Sequence_Events>
     </sequence_object>
@@ -92,14 +98,14 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 4 -->
+    <!-- Line 5 -->
     <!-- Trigger Scene 3 - Covid Cell Propogation -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>4</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>4</Script_Line_ID>
+          <Script_Line_ID>5</Script_Line_ID>
         </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -108,20 +114,9 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 5 -->
-    <sequence_object>
-      <Start_Time>5</Start_Time>
-      <Sequence_Events>
-        <sequence_event>
-          <Event_Id>10</Event_Id>
-          <Script_Line_ID>5</Script_Line_ID>
-        </sequence_event>
-      </Sequence_Events>
-    </sequence_object>
-
     <!-- Line 6 -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>8</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
@@ -130,9 +125,20 @@
       </Sequence_Events>
     </sequence_object>
 
+    <!-- Line 7 -->
+    <sequence_object>
+      <Start_Time>8</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>10</Event_Id>
+          <Script_Line_ID>7</Script_Line_ID>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object>
+
     <!-- Fade Out -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>6</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>50</Event_Id>
@@ -163,14 +169,14 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 7 -->
+    <!-- Line 8 -->
     <!-- Syringe Fly -->
     <sequence_object>
       <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>7</Script_Line_ID>
+          <Script_Line_ID>8</Script_Line_ID>
         </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -190,18 +196,19 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 8 -->
+    <!-- NOT WORKING FOR SOME REASON -->
+    <!-- Line 9 -->
     <sequence_object>
       <Start_Time>2</Start_Time>
       <sequence_event>
         <Event_Id>10</Event_Id>
-        <Script_Line_ID>8</Script_Line_ID>
+        <Script_Line_ID>9</Script_Line_ID>
       </sequence_event>
     </sequence_object>
 
     <!-- Fade Out -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>8</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>50</Event_Id>
@@ -236,14 +243,14 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 9 -->
+    <!-- Line 10 -->
     <!-- MRNA Appear -->
     <sequence_object>
       <Start_Time>2</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>9</Script_Line_ID>
+          <Script_Line_ID>10</Script_Line_ID>
         </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -252,10 +259,15 @@
       </Sequence_Events>
     </sequence_object>
 
+    <!-- Line 11 -->
     <!-- MRNA Attack -->
     <sequence_object>
-      <Start_Time>4</Start_Time>
+      <Start_Time>7</Start_Time>
       <Sequence_Events>
+        <sequence_event>
+          <Event_Id>10</Event_Id>
+          <Script_Line_ID>11</Script_Line_ID>
+        </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
           <Scene_ID>9</Scene_ID>
@@ -263,14 +275,14 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 10 -->
+    <!-- Line 12 -->
     <!-- Cell Emits Spikes -->
     <sequence_object>
       <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>10</Script_Line_ID>
+          <Script_Line_ID>12</Script_Line_ID>
         </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -291,14 +303,10 @@
     </sequence_object>
 
     <!-- White Blood Cell Appear -->
-    <!-- Line 11 -->
+    <!-- Line 13 -->
     <sequence_object>
       <Start_Time>4</Start_Time>
       <Sequence_Events>
-        <sequence_event>
-          <Event_Id>10</Event_Id>
-          <Script_Line_ID>11</Script_Line_ID>
-        </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
           <Scene_ID>11</Scene_ID>
@@ -379,13 +387,13 @@
     </sequence_object>
 
     <!-- Emit Anti-Bodies -->
-    <!-- Line 12 -->
+    <!-- Line 13 -->
     <sequence_object>
       <Start_Time>2</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>12</Script_Line_ID>
+          <Script_Line_ID>13</Script_Line_ID>
         </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -405,14 +413,14 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 13 -->
+    <!-- Line 14 -->
     <!-- COVID Cell Appears -->
     <sequence_object>
       <Start_Time>5</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>13</Script_Line_ID>
+          <Script_Line_ID>14</Script_Line_ID>
         </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -421,15 +429,15 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 14 -->
+    <!-- Line 15 -->
     <!-- Antibodies Attack -->
     <!-- White Blood Cell Fly Away -->
     <sequence_object>
-      <Start_Time>10</Start_Time>
+      <Start_Time>4</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>14</Script_Line_ID>
+          <Script_Line_ID>15</Script_Line_ID>
         </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -438,16 +446,11 @@
       </Sequence_Events>
     </sequence_object>
 
-    <!-- Line 15 -->
     <!-- Covid Cell Fly Away -->
     <!-- Remove White Blood Cell System -->
     <sequence_object>
-      <Start_Time>10</Start_Time>
+      <Start_Time>8</Start_Time>
       <Sequence_Events>
-         <sequence_event>
-          <Event_Id>10</Event_Id>
-          <Script_Line_ID>15</Script_Line_ID>
-        </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
           <Scene_ID>21</Scene_ID>
@@ -461,7 +464,7 @@
 
     <!-- Spawn COVID Anitbody System -->
     <sequence_object>
-      <Start_Time>3</Start_Time>
+      <Start_Time>1</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>2</Event_Id>
@@ -472,7 +475,7 @@
 
     <!-- Cell Appears -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>1</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -483,7 +486,7 @@
 
     <!-- Anti-COVID Cell Appears -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>1</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -495,7 +498,7 @@
     <!-- Line 16 -->
     <!-- Anti-COVID Cell Attacks -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>2</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
@@ -510,7 +513,7 @@
 
     <!-- Anti-COVID Cell Drops Out -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>2</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>3</Event_Id>
@@ -519,10 +522,15 @@
       </Sequence_Events>
     </sequence_object>
 
+    <!-- Line 17 -->
     <!-- Cell Shrinks -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>4</Start_Time>
       <Sequence_Events>
+        <sequence_event>
+          <Event_Id>10</Event_Id>
+          <Script_Line_ID>17</Script_Line_ID>
+        </sequence_event>
         <sequence_event>
           <Event_Id>3</Event_Id>
           <Scene_ID>26</Scene_ID>
@@ -532,7 +540,7 @@
 
     <!-- Fade Out -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>9</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>50</Event_Id>
@@ -557,13 +565,13 @@
       </Sequence_Events>
     </sequence_object>
     
-    <!-- Line 17 -->
+    <!-- Line 18 -->
     <sequence_object>
-      <Start_Time>5</Start_Time>
+      <Start_Time>1</Start_Time>
       <Sequence_Events>
         <sequence_event>
           <Event_Id>10</Event_Id>
-          <Script_Line_ID>17</Script_Line_ID>
+          <Script_Line_ID>18</Script_Line_ID>
         </sequence_event>
       </Sequence_Events>
     </sequence_object>
