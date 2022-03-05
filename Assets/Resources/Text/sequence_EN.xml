@@ -200,10 +200,12 @@
     <!-- Line 9 -->
     <sequence_object>
       <Start_Time>2</Start_Time>
-      <sequence_event>
+      <Sequence_Events>
+        <sequence_event>
         <Event_Id>10</Event_Id>
         <Script_Line_ID>9</Script_Line_ID>
       </sequence_event>
+      </Sequence_Events>
     </sequence_object>
 
     <!-- Fade Out -->

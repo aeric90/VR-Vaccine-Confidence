@@ -216,6 +216,7 @@ public class sequence_event
                                 break;
                             case 10:
                                 scene_manager.instance.Play_Script_Line(e.Script_Line_ID);
+                                Debug.Log(e.Script_Line_ID);
                                 break;
                             /*
                             case 10:
