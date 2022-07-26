@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2815089133578330718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7091566071454238934}
+  m_Layer: 0
+  m_Name: Covid Snap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7091566071454238934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815089133578330718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.365, y: 0.191, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9062437277062332517}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6100609286378193839
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1d14386458aa3429f2c056a4e538f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  covid_cell_container: {fileID: 4112016960060486409}
+  cell_snap: {fileID: 2815089133578330718}
 --- !u!1 &6235842214015586417
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +127,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 8427419039672069292}
+  - {fileID: 7091566071454238934}
   m_Father: {fileID: 6100609286378193808}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -196,6 +229,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7377856308591054306, guid: a565f57b2d15fb040a82bddb332f59f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 22bfcd8b74375d345aa25df7e130b3b0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a565f57b2d15fb040a82bddb332f59f5, type: 3}
 --- !u!4 &8427419039672069292 stripped
@@ -291,8 +329,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 910644583993673298, guid: 2027a855cd474124b9c80fba73066e34, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2027a855cd474124b9c80fba73066e34, type: 3}
 --- !u!4 &3627183784564970340 stripped
 Transform:
@@ -300,3 +337,46 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6100609286952595499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4112016960060486409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7906463258231128866, guid: 2027a855cd474124b9c80fba73066e34,
+    type: 3}
+  m_PrefabInstance: {fileID: 6100609286952595499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2659654026213410785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8088828783871752138, guid: 2027a855cd474124b9c80fba73066e34,
+    type: 3}
+  m_PrefabInstance: {fileID: 6100609286952595499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8508048872118322960
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2659654026213410785}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d61140e73ae76204681f16b8d8b65004, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2426117579180711398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2659654026213410785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7539aa8148a67d4e9127afd976e8528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

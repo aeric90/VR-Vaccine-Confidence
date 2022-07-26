@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sequence_container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sequence_Objects>
+    <!-- Create Fade Pane -->
+    <!-- Play Music -->
+	<!-- Fade Out -->  
+    <sequence_object>
+      <Start_Time>0</Start_Time>
+      <Sequence_Events>
+        <sequence_event>
+          <Event_Id>4</Event_Id>
+          <Prefab>Fade Plane</Prefab>
+        </sequence_event>
+		<sequence_event>
+			<Event_Id>50</Event_Id>
+		</sequence_event>
+        <sequence_event>
+          <Event_Id>60</Event_Id>
+        </sequence_event>
+      </Sequence_Events>
+    </sequence_object> 
+
+	  <!-- Clear Quad Spawns -->
+	  <!-- Turn Off Blood Stream -->
+	  <!-- Spawn Sponsor Logos 1 -->
+	  <!-- Fade In -->
+	  <sequence_object>
+		  <Start_Time>3</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>35</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>25</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>45</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>55</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>80</Event_Id>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+	  <!-- Line 14 -->
+	  <sequence_object>
+		  <Start_Time>2</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>10</Event_Id>
+				  <Script_Line_ID>14</Script_Line_ID>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+
+	  <!-- Remove Sponsor Logos 1 -->
+	  <!-- Show Credits 1 -->
+	  <sequence_object>
+		  <Start_Time>5</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>80</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>81</Event_Id>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+	  <!-- Remove Credits 1 -->
+	  <!-- Show Credits 2 -->
+	  <sequence_object>
+		  <Start_Time>5</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>81</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>82</Event_Id>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+	  <!-- Remove Credits 2 -->
+	  <!-- Show Credits 3 -->
+	  <sequence_object>
+		  <Start_Time>5</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>82</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>83</Event_Id>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+	  <!-- Remove Credits 3 -->
+	  <!-- Show Sponsor Logos 2 -->
+	  <sequence_object>
+		  <Start_Time>5</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>83</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>84</Event_Id>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+	  <!-- Fade Music -->
+	  <!-- Fade Out -->
+	  <sequence_object>
+		  <Start_Time>2</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>65</Event_Id>
+			  </sequence_event>
+			  <sequence_event>
+				  <Event_Id>50</Event_Id>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+	  <!-- Remove Sponsor Logos 2 -->
+	  <sequence_object>
+		  <Start_Time>2</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>84</Event_Id>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+	  <!--End Sequence -->
+	  <sequence_object>
+		  <Start_Time>5</Start_Time>
+		  <Sequence_Events>
+			  <sequence_event>
+				  <Event_Id>99</Event_Id>
+			  </sequence_event>
+		  </Sequence_Events>
+	  </sequence_object>
+
+  </Sequence_Objects>
+</sequence_container>

@@ -144,8 +144,8 @@ Transform:
   - {fileID: 4915408068258664608}
   - {fileID: 1005447483114761544}
   - {fileID: 3220928894066594910}
-  m_Father: {fileID: 7522789435423811455}
-  m_RootOrder: 1
+  m_Father: {fileID: 3432637447338663259}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7574170478879612226
 Animator:
@@ -562,9 +562,46 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6100609286952595499}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &7522789435423811455 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4381974883676804948, guid: 2027a855cd474124b9c80fba73066e34,
+--- !u!1 &2659654026213410785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8088828783871752138, guid: 2027a855cd474124b9c80fba73066e34,
     type: 3}
   m_PrefabInstance: {fileID: 6100609286952595499}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &3432637447338663259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8866068419272846704, guid: 2027a855cd474124b9c80fba73066e34,
+    type: 3}
+  m_PrefabInstance: {fileID: 6100609286952595499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1743673522369658485
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2659654026213410785}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d61140e73ae76204681f16b8d8b65004, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2964421941964749778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2659654026213410785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7539aa8148a67d4e9127afd976e8528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

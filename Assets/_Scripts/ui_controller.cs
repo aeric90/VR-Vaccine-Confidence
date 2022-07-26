@@ -13,7 +13,14 @@ public class ui_controller : MonoBehaviour
     public GameObject start_UI;
     public GameObject CC_UI;
     public GameObject pause_UI;
-    public GameObject logo_UI;
+    public GameObject logo_1_UI;
+    public GameObject logo_2_UI;
+    public GameObject EN_credits_1_UI;
+    public GameObject EN_credits_2_UI;
+    public GameObject EN_credits_3_UI;
+    public GameObject FR_credits_1_UI;
+    public GameObject FR_credits_2_UI;
+    public GameObject FR_credits_3_UI;
     public GameObject Start_Button;
     public GameObject Pause_Button;
 
@@ -135,9 +142,44 @@ public class ui_controller : MonoBehaviour
         Pause_Button.SetActive(!Pause_Button.activeSelf);
     }
 
-    public void Toggle_Logo_UI()
+    public void Toggle_Logo_1_UI()
     {
-        logo_UI.SetActive(!logo_UI.activeSelf);
+        logo_1_UI.SetActive(!logo_1_UI.activeSelf);
+    }
+
+    public void Toggle_Logo_2_UI()
+    {
+        logo_2_UI.SetActive(!logo_2_UI.activeSelf);
+    }
+
+    public void Toggle_EN_Credit_1_UI()
+    {
+        EN_credits_1_UI.SetActive(!EN_credits_1_UI.activeSelf);
+    }
+
+    public void Toggle_EN_Credit_2_UI()
+    {
+        EN_credits_2_UI.SetActive(!EN_credits_2_UI.activeSelf);
+    }
+
+    public void Toggle_EN_Credit_3_UI()
+    {
+        EN_credits_3_UI.SetActive(!EN_credits_3_UI.activeSelf);
+    }
+
+    public void Toggle_FR_Credit_1_UI()
+    {
+        FR_credits_1_UI.SetActive(!FR_credits_1_UI.activeSelf);
+    }
+
+    public void Toggle_FR_Credit_2_UI()
+    {
+        FR_credits_2_UI.SetActive(!FR_credits_2_UI.activeSelf);
+    }
+
+    public void Toggle_FR_Credit_3_UI()
+    {
+        FR_credits_3_UI.SetActive(!FR_credits_3_UI.activeSelf);
     }
 
     public void Show_Language_UI()
@@ -148,6 +190,6 @@ public class ui_controller : MonoBehaviour
     public void UI_Reset()
     {
         lang_UI.SetActive(true);
-        logo_UI.SetActive(false);
+        logo_2_UI.SetActive(false);
     }
 }

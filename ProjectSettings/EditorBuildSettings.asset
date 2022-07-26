@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Dev Scenes/Main Scene - Eric.unity
-    guid: 963b490add667304092d289d1e292ab1
   - enabled: 1
     path: Assets/Scenes/VR Vaccine Confidence Scene.unity
     guid: 2b67295886a2a854098073c01574751d

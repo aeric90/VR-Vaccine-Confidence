@@ -157,6 +157,7 @@ public class sequence_event
     }
 
     public bool test_sequence;
+    public string test_lang;
     public TextAsset sequence_file;
 
     public TextAsset EN_sequence_file;
@@ -177,7 +178,11 @@ public class sequence_event
     // Start is called before the first frame update
     void Start()
     {
-
+        if (test_sequence)
+        {
+            Import_Sequence();
+            Sequence_Active = true;
+        }
     }
 
     // Update is called once per frame
@@ -274,7 +279,28 @@ public class sequence_event
                                 scene_manager.instance.Turn_Rear_Fade_Off();
                                 break;
                             case 80:
-                                ui_controller.instance.Toggle_Logo_UI();
+                                ui_controller.instance.Toggle_Logo_1_UI();
+                                break;
+                            case 81:
+                                ui_controller.instance.Toggle_EN_Credit_1_UI();
+                                break;
+                            case 82:
+                                ui_controller.instance.Toggle_EN_Credit_2_UI();
+                                break;
+                            case 83:
+                                ui_controller.instance.Toggle_EN_Credit_3_UI();
+                                break;
+                            case 84:
+                                ui_controller.instance.Toggle_Logo_2_UI();
+                                break;
+                            case 85:
+                                ui_controller.instance.Toggle_FR_Credit_1_UI();
+                                break;
+                            case 86:
+                                ui_controller.instance.Toggle_FR_Credit_2_UI();
+                                break;
+                            case 87:
+                                ui_controller.instance.Toggle_FR_Credit_3_UI();
                                 break;
                             case 99:
                                 scene_manager.instance.End_Scene();
@@ -299,6 +325,7 @@ public class sequence_event
         //Not sure if we can remove this test sequence now that the sequences are in use
         if (test_sequence)
         {
+            scene_manager.instance.Lang_Flag = test_lang;
             reader = new System.IO.StringReader(sequence_file.text);
         }
         else

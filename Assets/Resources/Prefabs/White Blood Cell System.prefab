@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011870252792688091}
   - component: {fileID: 2860330021327550017}
+  - component: {fileID: 2303071643740590437}
   m_Layer: 0
   m_Name: Hero Spike 3
   m_TagString: Untagged
@@ -42,7 +43,7 @@ Animator:
   m_GameObject: {fileID: 92991493377811912}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 836a4445300a8514bba74417664e48f3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d7777f9bd8154a4f801d44c0df6d663, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -51,6 +52,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2303071643740590437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92991493377811912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e2ebc4d61cf3245b62786a186f66c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1794644910871997599
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +226,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3584220833547219260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1072285424041638304}
+  m_Layer: 0
+  m_Name: Spike Snap 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1072285424041638304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3584220833547219260}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00478, y: 0.0025, z: 0.0259}
+  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_Children: []
+  m_Father: {fileID: 5563525822136090753}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4300716125643679534
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3814420656882052925}
   - component: {fileID: 2113462821621527719}
+  - component: {fileID: 8422536665649875299}
   m_Layer: 0
   m_Name: Hero Spike 2
   m_TagString: Untagged
@@ -255,7 +299,7 @@ Animator:
   m_GameObject: {fileID: 4300716125643679534}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 836a4445300a8514bba74417664e48f3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2950513550db46d4888ec656f9901529, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -264,6 +308,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8422536665649875299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4300716125643679534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e2ebc4d61cf3245b62786a186f66c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4551963085557347650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791981791893156525}
+  m_Layer: 0
+  m_Name: Spike Snap 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1791981791893156525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4551963085557347650}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00075, y: 0.0147, z: -0.0212}
+  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_Children: []
+  m_Father: {fileID: 5563525822136090753}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4861138680766654199
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6100609286378193808}
+  - component: {fileID: 198904309355345377}
   m_Layer: 0
   m_Name: White Blood Cell System
   m_TagString: Untagged
@@ -443,6 +530,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &198904309355345377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100609286378193839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd091db7bfe01014fbc56f0017af3e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spike_1: {fileID: 5812594661331431002}
+  spike_2: {fileID: 1794644910871997599}
+  spike_3: {fileID: 2450721032057597561}
+  spike_1_snap: {fileID: 4551963085557347650}
+  spike_2_snap: {fileID: 7463049096991044965}
+  spike_3_snap: {fileID: 3584220833547219260}
 --- !u!1 &6235842214015586417
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +613,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anti_body_particles: {fileID: 4948196573328722619}
+--- !u!1 &7463049096991044965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8602987681376847518}
+  m_Layer: 0
+  m_Name: Spike Snap 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8602987681376847518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463049096991044965}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0202, y: -0.0163, z: -0.00254}
+  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_Children: []
+  m_Father: {fileID: 5563525822136090753}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8350402145350591979
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8980788320877211128}
   - component: {fileID: 6131975493026575970}
+  - component: {fileID: 5109981406442171659}
   m_Layer: 0
   m_Name: Hero Spike 1
   m_TagString: Untagged
@@ -550,7 +686,7 @@ Animator:
   m_GameObject: {fileID: 8350402145350591979}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 836a4445300a8514bba74417664e48f3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 061da563f4015e84f8ed348d20a3c3a0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -559,6 +695,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5109981406442171659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8350402145350591979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e2ebc4d61cf3245b62786a186f66c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5155586147116322697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -643,6 +791,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba4137bd217cb14e88752b551bc4888, type: 3}
+--- !u!1 &4948196573328722619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 227384330716661042, guid: 9ba4137bd217cb14e88752b551bc4888,
+    type: 3}
+  m_PrefabInstance: {fileID: 5155586147116322697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5563525822136090753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 772876457975844616, guid: 9ba4137bd217cb14e88752b551bc4888,
@@ -652,12 +806,6 @@ Transform:
 --- !u!1 &1021107465382375016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5307458752123150817, guid: 9ba4137bd217cb14e88752b551bc4888,
-    type: 3}
-  m_PrefabInstance: {fileID: 5155586147116322697}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4948196573328722619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 227384330716661042, guid: 9ba4137bd217cb14e88752b551bc4888,
     type: 3}
   m_PrefabInstance: {fileID: 5155586147116322697}
   m_PrefabAsset: {fileID: 0}
