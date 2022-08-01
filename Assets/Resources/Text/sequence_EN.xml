@@ -126,7 +126,7 @@
 	<!-- Line 3 -->
 	<!-- Covid Cell Attacks -->
 	<sequence_object>
-		<Start_Time>3</Start_Time>
+		<Start_Time>4</Start_Time>
 		<Sequence_Events>
 			<sequence_event>
 				<Event_Id>10</Event_Id>
@@ -179,7 +179,7 @@
 
 	<!-- Line 6 -->
 	<sequence_object>
-		<Start_Time>8</Start_Time>
+		<Start_Time>9</Start_Time>
 		<Sequence_Events>
 			<sequence_event>
 				<Event_Id>10</Event_Id>
@@ -190,7 +190,7 @@
 
 	<!-- Line 7 -->
 	<sequence_object>
-		<Start_Time>8</Start_Time>
+		<Start_Time>9</Start_Time>
 		<Sequence_Events>
 			<sequence_event>
 				<Event_Id>10</Event_Id>
@@ -310,14 +310,14 @@
 		  </Sequence_Events>
 	  </sequence_object>
 
-	  <!-- Line 12 -->
+	  <!-- Line 10 -->
 	  <!-- MRNA Attack -->
 	  <sequence_object>
 		  <Start_Time>3</Start_Time>
 		  <Sequence_Events>
 			  <sequence_event>
 				  <Event_Id>10</Event_Id>
-				  <Script_Line_ID>12</Script_Line_ID>
+				  <Script_Line_ID>10</Script_Line_ID>
 			  </sequence_event>
 			  <sequence_event>
 				  <Event_Id>3</Event_Id>
@@ -359,14 +359,14 @@
 		  </Sequence_Events>
 	  </sequence_object>
 
-	  <!-- Line 10 -->
+	  <!-- Line 12 -->
 	  <!-- White Blood Cell Appear -->
 	  <sequence_object>
-		  <Start_Time>2</Start_Time>
+		  <Start_Time>3</Start_Time>
 		  <Sequence_Events>
 			  <sequence_event>
 				  <Event_Id>10</Event_Id>
-				  <Script_Line_ID>10</Script_Line_ID>
+				  <Script_Line_ID>12</Script_Line_ID>
 			  </sequence_event>
 			  <sequence_event>
 				  <Event_Id>3</Event_Id>

@@ -33,7 +33,7 @@ public class music_controller : MonoBehaviour
     public void Play()
     {
         GetComponent<AudioSource>().Play();
-        GetComponent<AudioSource>().volume = 0.15f;
+        GetComponent<AudioSource>().volume = 0.08f;
     }
 
     public void Stop()
